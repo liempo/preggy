@@ -1,0 +1,45 @@
+﻿{
+  "items": [
+    {
+      "question": "How old are you when you get pregnant?",
+      "choices": [
+        "18 and below",
+        "19 to 25",
+        "26 to 30",
+        "31 and above"
+      ]
+    },
+    {
+      "question": "Do you think teenage pregnancy is risky?",
+      "choices": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "question": "Are you aware of the various of contraceptive methods (protection) that are available?",
+      "choices": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "question": "Why did you become pregnant as a teenager",
+      "choices": [
+        "I wanted benefits/housing",
+        "I was expecting my partner to use contraception",
+        "I thought I couldn't get pregnant",
+        "Got caught up in the moment"
+      ]
+    },
+    {
+      "question": "If you decided to continue the pregnancy what were your reason?",
+      "choices": [
+        "I didn't agree with abortion",
+        "I didn't really think about options",
+        "I felt pressured not to have abortion",
+        "It wasn't planned but realized I wanted it"
+      ]
+    }
+  ]
+}
