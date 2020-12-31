@@ -33,10 +33,10 @@ MonoBehaviour:
       m_Sprite: {fileID: -7205376241737224341, guid: abdcea6717244614ea150fbb0efd91a5, type: 3}
     - m_Name: Judy
       m_Hash: -1348490555
-      m_Sprite: {fileID: -691482801739447519, guid: 56bf3542ccaa0714da6fa2244c1149bd, type: 3}
+      m_Sprite: {fileID: 6088973485714410881, guid: 56bf3542ccaa0714da6fa2244c1149bd, type: 3}
     - m_Name: Justine
       m_Hash: -42473538
-      m_Sprite: {fileID: -435359914098906672, guid: 41ef4cf28c51df7409a03e9e60a27f1f, type: 3}
+      m_Sprite: {fileID: 6164789551749470021, guid: 41ef4cf28c51df7409a03e9e60a27f1f, type: 3}
   - m_Name: Right Backarm
     m_Hash: 2032781095
     m_CategoryList:
@@ -45,10 +45,10 @@ MonoBehaviour:
       m_Sprite: {fileID: 2553353489265677323, guid: abdcea6717244614ea150fbb0efd91a5, type: 3}
     - m_Name: Judy
       m_Hash: -1348490555
-      m_Sprite: {fileID: -6195411782704302042, guid: 56bf3542ccaa0714da6fa2244c1149bd, type: 3}
+      m_Sprite: {fileID: 6999297751011537758, guid: 56bf3542ccaa0714da6fa2244c1149bd, type: 3}
     - m_Name: Justine
       m_Hash: -42473538
-      m_Sprite: {fileID: -8437541075878735017, guid: 41ef4cf28c51df7409a03e9e60a27f1f, type: 3}
+      m_Sprite: {fileID: 5286197454097231213, guid: 41ef4cf28c51df7409a03e9e60a27f1f, type: 3}
   - m_Name: Left Backarm
     m_Hash: -1570119574
     m_CategoryList:
@@ -57,7 +57,7 @@ MonoBehaviour:
       m_Sprite: {fileID: 7324430599765805688, guid: abdcea6717244614ea150fbb0efd91a5, type: 3}
     - m_Name: Judy
       m_Hash: -1348490555
-      m_Sprite: {fileID: 8572907561295110885, guid: 56bf3542ccaa0714da6fa2244c1149bd, type: 3}
+      m_Sprite: {fileID: 1050689795293427124, guid: 56bf3542ccaa0714da6fa2244c1149bd, type: 3}
     - m_Name: Justine
       m_Hash: -42473538
-      m_Sprite: {fileID: 120931023207829452, guid: 41ef4cf28c51df7409a03e9e60a27f1f, type: 3}
+      m_Sprite: {fileID: -9131903598058107885, guid: 41ef4cf28c51df7409a03e9e60a27f1f, type: 3}
