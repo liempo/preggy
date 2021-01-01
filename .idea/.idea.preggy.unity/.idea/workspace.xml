@@ -1,5 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9237080e-dfd0-4638-9b27-be4cb7212af7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Main Menu/Scripts/QuestionArea.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Main Menu/Scripts/QuestionArea.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.preggy.unity/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.preggy.unity/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.preggy.unity/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.preggy.unity/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.preggy.unity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.preggy.unity/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Animations/Character.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Animations/Character.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Character.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Character.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Sprites/Angie.psb.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Sprites/Angie.psb.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Sprites/Characters.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Sprites/Characters.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Common/Scripts/Surveys.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Common/Scripts/Askable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Common/Scripts/Surveys.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Common/Scripts/Askable.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/External/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/External/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Main Menu/Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Main Menu/Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Main Menu/Scripts/Menu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Main Menu/Scripts/Menu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/surveys.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/surveys.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Users/Liempo/Documents/preggy.unity/Assets/Main Menu/Scripts/Menu.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Liempo/Documents/preggy.unity/Assets/Main Menu/Scripts/Menu.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/Assets/Main Menu/Scripts/MainPanel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Common/Scripts/JsonHelper.cs" />
+      <option value="$PROJECT_DIR$/Assets/StreamingAssets/surveys.json" />
+      <option value="$PROJECT_DIR$/Assets/Common/Scripts/Characters.cs" />
+      <option value="$PROJECT_DIR$/Assets/Main Menu/Scripts/Menu.cs" />
+      <option value="$PROJECT_DIR$/Assets/Common/Scripts/Surveys.cs" />
+      <option value="$PROJECT_DIR$/Assets/Common/Scripts/Survey.cs" />
+      <option value="$PROJECT_DIR$/Assets/Common/Scripts/Models.cs" />
+      <option value="$PROJECT_DIR$/Assets/Common/Scripts/Askable.cs" />
+      <option value="$PROJECT_DIR$/Assets/Main Menu/Scripts/Choices.cs" />
+      <option value="$PROJECT_DIR$/Assets/Main Menu/Scripts/QuestionPanel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Main Menu/Scripts/QuestionArea.cs" />
+    </changedPaths>
+  </component>
+  <component name="ProjectId" id="1mKzjvsqPAb54VEZpywWAyT4vo3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
@@ -19,5 +83,41 @@
       </option>
       <method v="2" />
     </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9237080e-dfd0-4638-9b27-be4cb7212af7" name="Default Changelist" comment="" />
+      <created>1609257220039</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1609257220039</updated>
+      <workItem from="1609257252192" duration="11305000" />
+      <workItem from="1609336441299" duration="4395000" />
+      <workItem from="1609395783450" duration="11168000" />
+      <workItem from="1609478286876" duration="2538000" />
+      <workItem from="1609484365949" duration="14120000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
 </project>

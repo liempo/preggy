@@ -21,10 +21,10 @@ MonoBehaviour:
       m_Sprite: {fileID: -7784365999887858842, guid: abdcea6717244614ea150fbb0efd91a5, type: 3}
     - m_Name: Judy
       m_Hash: -1348490555
-      m_Sprite: {fileID: 7029641852632592293, guid: 56bf3542ccaa0714da6fa2244c1149bd, type: 3}
+      m_Sprite: {fileID: 328971916698164172, guid: 56bf3542ccaa0714da6fa2244c1149bd, type: 3}
     - m_Name: Justine
       m_Hash: -42473538
-      m_Sprite: {fileID: -2554222263673213329, guid: 41ef4cf28c51df7409a03e9e60a27f1f, type: 3}
+      m_Sprite: {fileID: -3714919611458352693, guid: 41ef4cf28c51df7409a03e9e60a27f1f, type: 3}
   - m_Name: Body
     m_Hash: 2073732236
     m_CategoryList:

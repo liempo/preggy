@@ -7,6 +7,12 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Common" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="Askable.cs" t="Include" />
+            <e p="JsonHelper.cs" t="Include" />
+          </e>
+        </e>
         <e p="External" t="Include">
           <e p="Modern UI Pack" t="Include">
             <e p="Editor" t="Include">
@@ -162,7 +168,8 @@
         </e>
         <e p="Main Menu" t="Include">
           <e p="Scripts" t="Include">
-            <e p="MainPanel.cs" t="Include" />
+            <e p="Menu.cs" t="Include" />
+            <e p="QuestionArea.cs" t="Include" />
           </e>
         </e>
       </e>
