@@ -1,5 +1,5 @@
-﻿using TMPro;
-using Common.Scripts;
+﻿using Common.Scripts;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -64,7 +64,6 @@ namespace Main_Menu.Scripts {
                 b.GetComponent<Button>()
                     .onClick.AddListener(Next);
             }
-
         }
     }
 }
