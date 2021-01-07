@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Michsky.UI.ModernUIPack;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Experimental.U2D.Animation;
 
@@ -30,7 +31,32 @@ namespace Main_Menu.Scripts {
             }
         }
 
+        private void OnEnable() {
+            // Load PlayerPrefs
+            if (PlayerPrefs.HasKey("Name"))
+                GetComponentInChildren<TMP_InputField>()
+                    .text = PlayerPrefs.GetString("Name");
+
+            if (PlayerPrefs.HasKey("Character")) {
+                var selector = GetComponentInChildren
+                    <HorizontalSelector>();
+                var character = PlayerPrefs
+                    .GetString("Character");
+
+                var selected = 0;
+                for (var i = 0; i < selector.itemList.Count; i++) {
+                    var item = selector.itemList[i];
+
+                    if (item.itemTitle == character)
+                        selected = i;
+                }
+                selector.index = selected;
+            } else PlayerPrefs.SetString(
+                "Character", "Angie");
+        }
+
         public void Change(string characterName) {
+            PlayerPrefs.SetString("Character", characterName);
             foreach (var item in _parts)
                 item.Value.SetCategoryAndLabel(
                     item.Key, characterName);

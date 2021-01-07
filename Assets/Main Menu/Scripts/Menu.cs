@@ -1,3 +1,4 @@
+using Michsky.UI.ModernUIPack;
 using UnityEngine;
 
 namespace Main_Menu.Scripts {
@@ -10,9 +11,6 @@ namespace Main_Menu.Scripts {
         public GameObject dashboard;
         public GameObject survey;
         public GameObject settings;
-
-        /** Miscellaneous GameObjects and Components *
-        /** --------------------------------------- **/
 
         public void SetPlayShowing(bool value) {
             main.SetActive(!value);
@@ -32,6 +30,12 @@ namespace Main_Menu.Scripts {
         public void SetSettingsShowing(bool value) {
             main.SetActive(!value);
             settings.SetActive(value);
+
+            // Manage PlayerPrefs here (on show only)
+            if (PlayerPrefs.HasKey("Volume") && value) {
+                GetComponentInChildren<SliderManager>()
+                    .saveValue = PlayerPrefs.GetFloat("Volume");
+            } else PlayerPrefs.SetFloat("Volume", 1f);
         }
 
         public void Quit() {
