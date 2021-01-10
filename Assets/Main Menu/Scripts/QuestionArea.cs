@@ -48,19 +48,12 @@ namespace Main_Menu.Scripts {
             _questionText.text = _items[_index].question;
 
             // Create the choices buttons
-            for (var i = 0; i < _items[_index].choices.Count; i++) {
-                var choice = _items[_index].choices[i];
-
+            foreach (var choice in _items[_index].choices) {
                 // Instantiate button prefab
                 var b = Instantiate(
                     button, _choicesArea.transform);
                 b.GetComponentInChildren<
                     TextMeshProUGUI>().text = choice;
-
-                // Modify RectTransform
-                var rect = b.GetComponent<RectTransform>();
-                rect.anchoredPosition = new Vector3(
-                    0, -(rect.rect.height * i), 0);
                 b.GetComponent<Button>()
                     .onClick.AddListener(Next);
             }
