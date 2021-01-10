@@ -2,14 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9237080e-dfd0-4638-9b27-be4cb7212af7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Main Menu/Scripts/CharacterArea.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Main Menu/Scripts/CharacterArea.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Common/JSON/stages.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Common/Scripts/Stage.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Common/Scripts/Stage.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Main Menu/Scripts/StageArea.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Main Menu/Scripts/StageArea.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.preggy.unity/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.preggy.unity/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.preggy.unity/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.preggy.unity/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.preggy.unity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.preggy.unity/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Character Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Character Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Common/Scripts/Askable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Common/Scripts/Askable.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Main Menu/Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Main Menu/Scene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Main Menu/Scripts/Menu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Main Menu/Scripts/Menu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Main Menu/Scripts/QuestionArea.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Main Menu/Scripts/QuestionArea.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +21,17 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.1/Scripts/Runtime/TMP_InputField.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -28,7 +42,6 @@
       <option value="$PROJECT_DIR$/Assets/Common/Scripts/Surveys.cs" />
       <option value="$PROJECT_DIR$/Assets/Common/Scripts/Survey.cs" />
       <option value="$PROJECT_DIR$/Assets/Common/Scripts/Models.cs" />
-      <option value="$PROJECT_DIR$/Assets/Common/Scripts/Askable.cs" />
       <option value="$PROJECT_DIR$/Assets/Main Menu/Scripts/Choices.cs" />
       <option value="$PROJECT_DIR$/Assets/Main Menu/Scripts/QuestionPanel.cs" />
       <option value="$PROJECT_DIR$/Assets/Common/Scripts/QuestionPrompt.cs" />
@@ -36,6 +49,10 @@
       <option value="$PROJECT_DIR$/Assets/Main Menu/Scripts/QuestionArea.cs" />
       <option value="$PROJECT_DIR$/Assets/Main Menu/Scripts/CharacterArea.cs" />
       <option value="$PROJECT_DIR$/Assets/Main Menu/Scripts/Menu.cs" />
+      <option value="$PROJECT_DIR$/Assets/Common/Scripts/Askable.cs" />
+      <option value="$PROJECT_DIR$/Assets/Common/Scripts/Stage.cs" />
+      <option value="$PROJECT_DIR$/Assets/Main Menu/Scripts/StageArea.cs" />
+      <option value="$PROJECT_DIR$/Assets/Common/JSON/stages.json" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1mKzjvsqPAb54VEZpywWAyT4vo3" />
@@ -86,7 +103,11 @@
       <workItem from="1609395783450" duration="11168000" />
       <workItem from="1609478286876" duration="2538000" />
       <workItem from="1609484365949" duration="17438000" />
-      <workItem from="1609656077137" duration="3591000" />
+      <workItem from="1609656077137" duration="3594000" />
+      <workItem from="1609684339725" duration="3055000" />
+      <workItem from="1610015059834" duration="7008000" />
+      <workItem from="1610182267446" duration="1153000" />
+      <workItem from="1610257746000" duration="2326000" />
     </task>
     <servers />
   </component>

@@ -8,18 +8,12 @@ namespace Main_Menu.Scripts {
         /** --------------------------------------- **/
         public GameObject main;
         public GameObject play;
-        public GameObject dashboard;
         public GameObject survey;
         public GameObject settings;
 
         public void SetPlayShowing(bool value) {
             main.SetActive(!value);
             play.SetActive(value);
-        }
-
-        public void SetDashboardShowing(bool value) {
-            main.SetActive(!value);
-            dashboard.SetActive(value);
         }
 
         public void SetSurveyShowing(bool value) {
@@ -31,7 +25,7 @@ namespace Main_Menu.Scripts {
             main.SetActive(!value);
             settings.SetActive(value);
 
-            // Manage PlayerPrefs here (on show only)
+            // Manage PlayerPrefs here (on active only)
             if (PlayerPrefs.HasKey("Volume") && value) {
                 GetComponentInChildren<SliderManager>()
                     .saveValue = PlayerPrefs.GetFloat("Volume");
