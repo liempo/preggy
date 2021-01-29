@@ -2,9 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9237080e-dfd0-4638-9b27-be4cb7212af7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Main Menu/Prefab/Question Area.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Main Menu/Prefab/Question Area.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.preggy.unity/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.preggy.unity/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.preggy.unity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.preggy.unity/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Animations.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Animations/Character.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Animations/Character.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Animations/Character_Idle.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Animations/Character_Idle.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Animations/Character_Running.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Animations/Character_Running.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Character Variant.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Character Variant.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Sprites.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Sprites/Angie.psb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Sprites/Angie.psb.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Sprites/Characters.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Sprites/Characters.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Sprites/Judy.psb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Sprites/Judy.psb.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Sprites/Justine.psb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Sprites/Justine.psb.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Common/Graphics.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Common/Graphics/Background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Common/Graphics/Background.png.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Main Menu/Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Main Menu/Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Main Menu/Scripts/QuestionArea.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Main Menu/Scripts/QuestionArea.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,9 +64,12 @@
       <option value="$PROJECT_DIR$/Assets/Main Menu/Scripts/Menu.cs" />
       <option value="$PROJECT_DIR$/Assets/Common/Scripts/Askable.cs" />
       <option value="$PROJECT_DIR$/Assets/Common/Scripts/Stage.cs" />
-      <option value="$PROJECT_DIR$/Assets/Main Menu/Scripts/StageArea.cs" />
       <option value="$PROJECT_DIR$/Assets/Common/JSON/stages.json" />
       <option value="$PROJECT_DIR$/Assets/Main Menu/Scripts/QuestionArea.cs" />
+      <option value="$PROJECT_DIR$/Assets/Breakout/Scripts/Manager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Breakout/Scripts/Paddle.cs" />
+      <option value="$PROJECT_DIR$/Assets/Breakout/Scripts/Ball.cs" />
+      <option value="$PROJECT_DIR$/Assets/Main Menu/Scripts/StageArea.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1mKzjvsqPAb54VEZpywWAyT4vo3" />
@@ -99,7 +124,11 @@
       <workItem from="1609684339725" duration="3055000" />
       <workItem from="1610015059834" duration="7008000" />
       <workItem from="1610182267446" duration="1153000" />
-      <workItem from="1610257746000" duration="2548000" />
+      <workItem from="1610257746000" duration="5609000" />
+      <workItem from="1610339023136" duration="1462000" />
+      <workItem from="1611636860772" duration="601000" />
+      <workItem from="1611901804039" duration="2593000" />
+      <workItem from="1611928207678" duration="1045000" />
     </task>
     <servers />
   </component>
