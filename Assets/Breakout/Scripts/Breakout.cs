@@ -2,13 +2,12 @@
 using UnityEngine;
 
 namespace Breakout.Scripts {
-    public class Manager : MonoBehaviour {
+    public class Breakout : Common.Scripts.Manager {
         // Public members to be modified in the Inspector
         public GameObject hudPanel;
         public GameObject pausePanel;
 
         // Public members that must be accessible to others
-        [HideInInspector] public int score;
         [HideInInspector] public int lives = 3;
         [HideInInspector] public float timeRemaining = 60f;
         [HideInInspector] public bool isTimerRunning;
@@ -21,6 +20,9 @@ namespace Breakout.Scripts {
         private GameObject _unpausedGameObject;
 
         private void Start() {
+            // Set the rating ranger
+            rating = new[] {500, 1500, 2000};
+
             _unpausedGameObject = hudPanel.transform
                 .Find("Unpaused Text").gameObject;
             _hudScoreText = hudPanel
@@ -66,8 +68,11 @@ namespace Breakout.Scripts {
             // Toggle HUD visibility
             hudPanel.SetActive(!value);
             pausePanel.SetActive(value);
-            isTimerRunning = !value;
-            isGameRunning = !value;
+
+            if (value) {
+                if (isGameRunning) isGameRunning = false;
+                if (isTimerRunning) isTimerRunning = false;
+            }
         }
 
         private void GameOver() {

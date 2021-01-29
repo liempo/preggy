@@ -1,11 +1,13 @@
-﻿using UnityEngine;
+﻿using System.Diagnostics.CodeAnalysis;
+using UnityEngine;
 
 namespace Breakout.Scripts {
     public class Ball : MonoBehaviour {
         // Public members to be modified in the Inspector
         public float initialVelocity = 600f;
+        public int pointPerHit = 50;
         private Vector3 _initialPosition;
-        private Manager _manager;
+        private Breakout _manager;
         private bool _isPlaying;
 
         // Private members for components
@@ -13,7 +15,7 @@ namespace Breakout.Scripts {
 
         private void Start() {
             _rb = GetComponent<Rigidbody2D>();
-            _manager = FindObjectOfType<Manager>();
+            _manager = FindObjectOfType<Breakout>();
             _initialPosition = transform.position;
         }
 
@@ -39,10 +41,12 @@ namespace Breakout.Scripts {
             }
         }
 
+
+        [SuppressMessage("ReSharper", "Unity.UnknownTag")]
         private void OnCollisionEnter2D(Collision2D other) {
             if (other.gameObject.CompareTag("Brick")) {
                 Destroy(other.gameObject);
-                _manager.score += 50;
+                _manager.score += pointPerHit;
             } else if (other.gameObject.CompareTag("Paddle")) {
                 // Redirect ball to the direction of the paddle
                 _rb.velocity = new Vector2(

@@ -7,14 +7,14 @@ namespace Breakout.Scripts {
         public float xMax;
         public float speed;
         private Vector3 _initialPosition;
-        private Manager _manager;
+        private Breakout _manager;
 
         // Private members for components
         private Rigidbody2D _rb;
 
         private void Start() {
             _rb = GetComponent<Rigidbody2D>();
-            _manager = FindObjectOfType<Manager>();
+            _manager = FindObjectOfType<Breakout>();
             _initialPosition = transform.position;
         }
 
