@@ -10,7 +10,7 @@
         <e p="Breakout" t="Include">
           <e p="Scripts" t="Include">
             <e p="Ball.cs" t="Include" />
-            <e p="Manager.cs" t="Include" />
+            <e p="Breakout.cs" t="Include" />
             <e p="Paddle.cs" t="Include" />
           </e>
         </e>
@@ -18,6 +18,7 @@
           <e p="Scripts" t="Include">
             <e p="Askable.cs" t="Include" />
             <e p="JsonHelper.cs" t="Include" />
+            <e p="Manager.cs" t="Include" />
             <e p="Stage.cs" t="Include" />
           </e>
         </e>
@@ -172,6 +173,12 @@
             <e p="Sprites" t="Include">
               <e p="EmojiOne Attribution.txt" t="Include" />
             </e>
+          </e>
+        </e>
+        <e p="Game Over" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="GameOver.cs" t="Include" />
+            <e p="Rating.cs" t="Include" />
           </e>
         </e>
         <e p="Main Menu" t="Include">

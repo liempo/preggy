@@ -8,10 +8,11 @@ namespace Breakout.Scripts {
         public GameObject pausePanel;
 
         // Public members that must be accessible to others
-        [HideInInspector] public int lives = 3;
-        [HideInInspector] public float timeRemaining = 60f;
+        public int lives = 3;
+        public float timeRemaining = 60f;
         [HideInInspector] public bool isTimerRunning;
         [HideInInspector] public bool isGameRunning;
+
         private TextMeshProUGUI _hudLivesText;
         private TextMeshProUGUI _hudScoreText;
         private TextMeshProUGUI _hudTimerText;
@@ -38,6 +39,9 @@ namespace Breakout.Scripts {
         // Update is called once per frame
         // ReSharper disable once InvertIf
         private void Update() {
+            // Skip method if IsGameOver
+            if (IsGameOver) return;
+
             // Update the HUD components
             _hudScoreText.text = score.ToString()
                 .PadLeft(4, '0');
@@ -75,11 +79,6 @@ namespace Breakout.Scripts {
             }
         }
 
-        private void GameOver() {
-            // Reset the game states
-            isTimerRunning = false;
-            isGameRunning = false;
-        }
 
         // Checks if player interacted
         private static bool IsInteracted() {

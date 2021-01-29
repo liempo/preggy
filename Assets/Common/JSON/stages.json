@@ -2,7 +2,7 @@
   "items": [
     {
       "title": "Stage 1",
-      "scene": "Breakout/Scene"
+      "scene": "Breakout"
     },
     {
       "title": "Stage 2",
