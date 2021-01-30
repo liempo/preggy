@@ -175,17 +175,13 @@
             </e>
           </e>
         </e>
-        <e p="Game Over" t="Include">
-          <e p="Scripts" t="Include">
-            <e p="GameOver.cs" t="Include" />
-            <e p="Rating.cs" t="Include" />
-          </e>
-        </e>
-        <e p="Main Menu" t="Include">
+        <e p="Menu" t="Include">
           <e p="Scripts" t="Include">
             <e p="CharacterArea.cs" t="Include" />
+            <e p="GameOver.cs" t="Include" />
             <e p="Menu.cs" t="Include" />
             <e p="QuestionArea.cs" t="Include" />
+            <e p="Rating.cs" t="Include" />
             <e p="StageArea.cs" t="Include" />
           </e>
         </e>

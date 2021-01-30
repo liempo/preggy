@@ -11,7 +11,7 @@ namespace Common.Scripts {
 
         // Use this variable to determine
         // If components need to be process
-        protected bool IsGameOver = false;
+        protected bool IsGameOver;
 
         private void Awake() {
             _scene = SceneManager
@@ -24,7 +24,7 @@ namespace Common.Scripts {
 
             for (var i = 0; i < rating.Length; i++) {
                 var max = rating[i];
-                if (score > min && score < max)
+                if (score >= min && (score <= max || i == rating.Length - 1))
                     return i;
                 min = rating[i];
             }
@@ -34,7 +34,8 @@ namespace Common.Scripts {
 
         protected void GameOver() {
             IsGameOver = true;
-            SceneManager.LoadScene("Game Over");
+            SceneManager.LoadScene("Game Over",
+                LoadSceneMode.Additive);
         }
 
         public void Retry() {

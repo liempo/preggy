@@ -2,7 +2,7 @@ using Common.Scripts;
 using TMPro;
 using UnityEngine;
 
-namespace Game_Over.Scripts {
+namespace Menu.Scripts {
     public class GameOver : MonoBehaviour {
 
         private Manager _manager;
