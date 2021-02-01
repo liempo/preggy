@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Experimental.U2D.Animation;
 
 namespace Common.Scripts {
     public class Character : MonoBehaviour {
@@ -44,6 +46,10 @@ namespace Common.Scripts {
             transform.position +=
                 (inputX > 0 ? Vector3.right : Vector3.left)
                 * (speed * Time.deltaTime);
+        }
+
+        private void Swap(string characterName) {
+
         }
     }
 }
