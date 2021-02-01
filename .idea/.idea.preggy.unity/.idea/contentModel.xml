@@ -17,6 +17,7 @@
         <e p="Common" t="Include">
           <e p="Scripts" t="Include">
             <e p="Askable.cs" t="Include" />
+            <e p="Character.cs" t="Include" />
             <e p="JsonHelper.cs" t="Include" />
             <e p="Manager.cs" t="Include" />
             <e p="Stage.cs" t="Include" />
