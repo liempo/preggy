@@ -17,7 +17,6 @@ namespace Menu.Scripts {
         }
 
         public void SetRating(int rating) {
-            Debug.Log("Rating = " + rating);
             for (var i = 0; i < rating + 1; i++) {
                 _stars[i].SetTrigger(Fill);
             }

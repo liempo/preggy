@@ -1,14 +1,18 @@
 ﻿using Common.Scripts;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Main_Menu.Scripts {
+namespace Menu.Scripts {
     public class QuestionArea : MonoBehaviour {
 
         // To be set in the Inspector
         public GameObject button;
         public TextAsset json;
+        public bool askOnce;
+        public UnityEvent onClick;
+        public string endMessage;
 
         // Objects and components
         private TextMeshProUGUI _questionText;
@@ -26,6 +30,12 @@ namespace Main_Menu.Scripts {
             _choicesArea = GameObject.Find("Choices Area");
             _questionText = GameObject.Find("Question Text")
                 .GetComponent<TextMeshProUGUI>();
+
+            if (askOnce) {
+                // Randomize the question
+                _index = Random.Range(0, _items.Length);
+                Next();
+            }
         }
 
         public void Next() {
@@ -35,9 +45,7 @@ namespace Main_Menu.Scripts {
 
             // if index will go out of bounds clear choices and set text
             if (_index == _items.Length - 1) {
-                _questionText.text =
-                    "Thank you for participating in our " +
-                    "Survey. Enjoy playing our games.";
+                _questionText.text = endMessage;
                 return;
             }
 
@@ -54,8 +62,9 @@ namespace Main_Menu.Scripts {
                     button, _choicesArea.transform);
                 b.GetComponentInChildren<
                     TextMeshProUGUI>().text = choice;
+
                 b.GetComponent<Button>()
-                    .onClick.AddListener(Next);
+                    .onClick.AddListener(onClick.Invoke);
             }
         }
     }

@@ -19,8 +19,22 @@ namespace Menu.Scripts {
                 .GetComponent<TextMeshProUGUI>();
 
             // Set data for UI components
-            _score.text = _manager.score.ToString();
-            _rating.SetRating(_manager.GetRating());
+            _score.text = (_manager != null) ?
+                _manager.score.ToString() : "0000";
+            _rating.SetRating((_manager != null) ?
+                _manager.GetRating() : 0);
+        }
+
+        public void Retry() {
+            // If manager is not null
+            // use it to retry else do nothing
+            if (_manager != null) _manager.Retry();
+        }
+
+        public void Quit() {
+            // If manager is not null
+            // Use it to quit else quit manually
+            if (_manager != null) _manager.Quit();
         }
     }
 }

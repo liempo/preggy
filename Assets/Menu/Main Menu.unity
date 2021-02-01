@@ -10199,6 +10199,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1877807538}
     m_Modifications:
+    - target: {fileID: 2302406560055701447, guid: c27bf2a051b0cd44fb673de34fccc464, type: 3}
+      propertyPath: json
+      value: 
+      objectReference: {fileID: 4900000, guid: 7a7971ea45abe5641b7d298c18c55d20, type: 3}
+    - target: {fileID: 2302406560055701447, guid: c27bf2a051b0cd44fb673de34fccc464, type: 3}
+      propertyPath: endMessage
+      value: Thank you for participating in our survey. Enjoy playing our games.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2302406560055701447, guid: c27bf2a051b0cd44fb673de34fccc464, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2302406560055701447, guid: c27bf2a051b0cd44fb673de34fccc464, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2302406560055701447, guid: c27bf2a051b0cd44fb673de34fccc464, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1019108600}
+    - target: {fileID: 2302406560055701447, guid: c27bf2a051b0cd44fb673de34fccc464, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2302406560055701447, guid: c27bf2a051b0cd44fb673de34fccc464, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Next
+      objectReference: {fileID: 0}
+    - target: {fileID: 2302406560055701447, guid: c27bf2a051b0cd44fb673de34fccc464, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Menu.Scripts.QuestionArea, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2302406560055701447, guid: c27bf2a051b0cd44fb673de34fccc464, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2302406560055701448, guid: c27bf2a051b0cd44fb673de34fccc464, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -10286,6 +10322,11 @@ PrefabInstance:
     - target: {fileID: 2302406560055701449, guid: c27bf2a051b0cd44fb673de34fccc464, type: 3}
       propertyPath: m_Name
       value: Question Area
+      objectReference: {fileID: 0}
+    - target: {fileID: 2302406560504205885, guid: c27bf2a051b0cd44fb673de34fccc464, type: 3}
+      propertyPath: m_text
+      value: We will conduct a quick survey for our research. Please participate.
+        Or else.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c27bf2a051b0cd44fb673de34fccc464, type: 3}

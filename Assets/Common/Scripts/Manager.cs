@@ -32,10 +32,9 @@ namespace Common.Scripts {
             return 0;
         }
 
-        protected void GameOver() {
+        protected virtual void GameOver() {
             IsGameOver = true;
-            SceneManager.LoadScene("Game Over",
-                LoadSceneMode.Additive);
+            SceneManager.LoadScene("Game Over");
         }
 
         public void Retry() {

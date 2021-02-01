@@ -5,24 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9237080e-dfd0-4638-9b27-be4cb7212af7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.preggy.unity/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.preggy.unity/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.preggy.unity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.preggy.unity/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Common/Scripts/Manager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Common/Scripts/Manager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Menu/Game Over.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Menu/Game Over.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Menu/Prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Menu/Prefab/Character Area.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Menu/Prefab/Character Area.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Menu/Prefab/Choice Button.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Menu/Prefab/Choice Button.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Menu/Prefab/Question Area.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Menu/Prefab/Question Area.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Menu/Prefab/Stage Button.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Menu/Prefab/Stage Button.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Menu/Prefab/Survey Button.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Menu/Prefab/Survey Button.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Menu/Main Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Menu/Main Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Menu/Prefabs/Question Area.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Menu/Prefabs/Question Area.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Menu/Scripts/GameOver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Menu/Scripts/GameOver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Menu/Scripts/QuestionArea.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Menu/Scripts/QuestionArea.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Menu/Scripts/Rating.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Menu/Scripts/Rating.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,11 +58,12 @@
       <option value="$PROJECT_DIR$/Assets/Breakout/Scripts/Ball.cs" />
       <option value="$PROJECT_DIR$/Assets/Common/JSON/stages.json" />
       <option value="$PROJECT_DIR$/Assets/Game Over/Scripts/GameOver.cs" />
-      <option value="$PROJECT_DIR$/Assets/Breakout/Scripts/Breakout.cs" />
       <option value="$PROJECT_DIR$/Assets/Game Over/Scripts/Rating.cs" />
-      <option value="$PROJECT_DIR$/Assets/Menu/Scripts/GameOver.cs" />
-      <option value="$PROJECT_DIR$/Assets/Menu/Scripts/Rating.cs" />
+      <option value="$PROJECT_DIR$/Assets/Menu/Scripts/QuestionArea.cs" />
+      <option value="$PROJECT_DIR$/Assets/Breakout/Scripts/Breakout.cs" />
       <option value="$PROJECT_DIR$/Assets/Common/Scripts/Manager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Menu/Scripts/Rating.cs" />
+      <option value="$PROJECT_DIR$/Assets/Menu/Scripts/GameOver.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1mKzjvsqPAb54VEZpywWAyT4vo3" />
@@ -133,7 +124,10 @@
       <workItem from="1611901804039" duration="2593000" />
       <workItem from="1611928207678" duration="12658000" />
       <workItem from="1611981117380" duration="3366000" />
-      <workItem from="1611987648464" duration="351000" />
+      <workItem from="1611987648464" duration="2853000" />
+      <workItem from="1612005403046" duration="880000" />
+      <workItem from="1612151755646" duration="600000" />
+      <workItem from="1612160555126" duration="1391000" />
     </task>
     <servers />
   </component>
