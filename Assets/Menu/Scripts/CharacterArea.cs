@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Experimental.U2D.Animation;
 
-namespace Main_Menu.Scripts {
+namespace Menu.Scripts {
     public class CharacterArea : MonoBehaviour {
 
         // Character's body parts
