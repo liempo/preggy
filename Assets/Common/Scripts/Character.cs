@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Experimental.U2D.Animation;
 
 namespace Common.Scripts {
@@ -15,6 +14,11 @@ namespace Common.Scripts {
 
         private void Start() {
             _animator = GetComponent<Animator>();
+
+            // Swap character skin if set
+            if (PlayerPrefs.HasKey("Character"))
+                Swap(PlayerPrefs.
+                    GetString("Character"));
         }
 
         private void FixedUpdate() {
@@ -48,8 +52,15 @@ namespace Common.Scripts {
                 * (speed * Time.deltaTime);
         }
 
-        private void Swap(string characterName) {
-
+        public void Swap(string characterName) {
+            foreach (Transform child in transform) {
+                var resolver = child.GetComponent
+                    <SpriteResolver>();
+                if (resolver == null)
+                    continue;
+                resolver.SetCategoryAndLabel(
+                    child.name, characterName);
+            }
         }
     }
 }

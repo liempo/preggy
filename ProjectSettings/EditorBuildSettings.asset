@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Breakout/Breakout.unity
     guid: 5e503075260233849a2b6c52db97334a
+  - enabled: 1
+    path: Assets/Catch/Catch.unity
+    guid: 0e9aa6fad4a9b504cab8fc1442532800
   m_configObjects: {}

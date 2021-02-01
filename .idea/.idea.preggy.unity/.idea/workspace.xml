@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9237080e-dfd0-4638-9b27-be4cb7212af7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Common/Scripts/Character.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Common/Scripts/Character.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.preggy.unity/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.preggy.unity/.idea/contentModel.xml" afterDir="false" />
+    <list default="true" id="9237080e-dfd0-4638-9b27-be4cb7212af7" name="Default Changelist" comment="Fix CharacterArea.cs namespace">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.preggy.unity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.preggy.unity/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Catch/Catch.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catch/Catch.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Common/Prefabs/Character Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Common/Prefabs/Character Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Common/JSON/stages.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Common/JSON/stages.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Common/Scripts/Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Common/Scripts/Character.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Menu/Scripts/CharacterArea.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Menu/Scripts/CharacterArea.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +30,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.1/Scripts/Runtime/TMP_InputField.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Liempo/Documents/preggy.unity/Assets/Menu/Scripts/CharacterArea.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -54,7 +55,6 @@
       <option value="$PROJECT_DIR$/Assets/Breakout/Scripts/Manager.cs" />
       <option value="$PROJECT_DIR$/Assets/Breakout/Scripts/BreakoutManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Breakout/Scripts/Ball.cs" />
-      <option value="$PROJECT_DIR$/Assets/Common/JSON/stages.json" />
       <option value="$PROJECT_DIR$/Assets/Game Over/Scripts/GameOver.cs" />
       <option value="$PROJECT_DIR$/Assets/Game Over/Scripts/Rating.cs" />
       <option value="$PROJECT_DIR$/Assets/Menu/Scripts/QuestionArea.cs" />
@@ -63,6 +63,8 @@
       <option value="$PROJECT_DIR$/Assets/Menu/Scripts/Rating.cs" />
       <option value="$PROJECT_DIR$/Assets/Menu/Scripts/GameOver.cs" />
       <option value="$PROJECT_DIR$/Assets/Common/Scripts/Character.cs" />
+      <option value="$PROJECT_DIR$/Assets/Common/JSON/stages.json" />
+      <option value="$PROJECT_DIR$/Assets/Menu/Scripts/CharacterArea.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1mKzjvsqPAb54VEZpywWAyT4vo3" />
@@ -127,8 +129,23 @@
       <workItem from="1612005403046" duration="880000" />
       <workItem from="1612151755646" duration="600000" />
       <workItem from="1612160555126" duration="3519000" />
-      <workItem from="1612182758055" duration="8394000" />
+      <workItem from="1612182758055" duration="10040000" />
     </task>
+    <task id="LOCAL-00001" summary="Fix CharacterArea.cs namespace">
+      <created>1612195005444</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1612195005444</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Fix CharacterArea.cs namespace">
+      <created>1612195052061</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1612195052061</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,5 +167,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Fix CharacterArea.cs namespace" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix CharacterArea.cs namespace" />
   </component>
 </project>
