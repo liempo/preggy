@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9237080e-dfd0-4638-9b27-be4cb7212af7" name="Default Changelist" comment="Better character skin swapping">
-      <change afterPath="$PROJECT_DIR$/Assets/Common/Scripts/Controls.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Common/Scripts/Controls.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.preggy.unity/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.preggy.unity/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.preggy.unity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.preggy.unity/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Breakout/Scripts/Paddle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Breakout/Scripts/Paddle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Common/Scripts/Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Common/Scripts/Character.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Catch/Scripts/Spawnable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catch/Scripts/Spawnable.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +27,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B9928817-6026-4650-AF20-035B53BF15A8/51/a26c0d7a/Input.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.1/Scripts/Runtime/TMP_InputField.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Liempo/Documents/preggy.unity/ProjectSettings/ProjectSettings.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Liempo/Documents/preggy.unity/Assets/Common/Scripts/Character.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -65,13 +61,13 @@
       <option value="$PROJECT_DIR$/Assets/Catch/Scripts/SpawnItem.cs" />
       <option value="$PROJECT_DIR$/Assets/Breakout/Scripts/Breakout.cs" />
       <option value="$PROJECT_DIR$/Assets/Catch/Scripts/Catch.cs" />
-      <option value="$PROJECT_DIR$/Assets/Catch/Scripts/Spawnable.cs" />
       <option value="$PROJECT_DIR$/Assets/Catch/Scripts/Spawner.cs" />
       <option value="$PROJECT_DIR$/Assets/Breakout/Scripts/Ball.cs" />
       <option value="$PROJECT_DIR$/Assets/Common/Scripts/Manager.cs" />
       <option value="$PROJECT_DIR$/Assets/Breakout/Scripts/Paddle.cs" />
       <option value="$PROJECT_DIR$/Assets/Common/Scripts/Controls.cs" />
       <option value="$PROJECT_DIR$/Assets/Common/Scripts/Character.cs" />
+      <option value="$PROJECT_DIR$/Assets/Catch/Scripts/Spawnable.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1mKzjvsqPAb54VEZpywWAyT4vo3" />
@@ -138,7 +134,7 @@
       <workItem from="1612160555126" duration="3519000" />
       <workItem from="1612182758055" duration="26584000" />
       <workItem from="1612263085965" duration="12966000" />
-      <workItem from="1612283418616" duration="1594000" />
+      <workItem from="1612283418616" duration="1823000" />
     </task>
     <task id="LOCAL-00001" summary="Fix CharacterArea.cs namespace">
       <created>1612195005444</created>
@@ -175,7 +171,21 @@
       <option name="project" value="LOCAL" />
       <updated>1612283686459</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Better touch controls">
+      <created>1612285057874</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1612285057874</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Add Android Logcat settings">
+      <created>1612285090279</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1612285090279</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,6 +211,8 @@
     <MESSAGE value="Better character skin swapping" />
     <MESSAGE value="Breakout code cleanup" />
     <MESSAGE value="Set project default orientation to portrait" />
-    <option name="LAST_COMMIT_MESSAGE" value="Set project default orientation to portrait" />
+    <MESSAGE value="Better touch controls" />
+    <MESSAGE value="Add Android Logcat settings" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Android Logcat settings" />
   </component>
 </project>
