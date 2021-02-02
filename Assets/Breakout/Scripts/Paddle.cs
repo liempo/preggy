@@ -1,5 +1,6 @@
 ﻿using Common.Scripts;
 using UnityEngine;
+using static Common.Scripts.Controls;
 
 namespace Breakout.Scripts {
     public class Paddle : MonoBehaviour {
@@ -27,15 +28,7 @@ namespace Breakout.Scripts {
             }
 
             // Move Paddle, A or D, Left or Right
-            var inputX = Input.GetAxis("Horizontal");
-            if (Input.touchCount == 1) {
-                var touch = Input.GetTouch(0);
-
-                if (touch.phase != TouchPhase.Stationary)
-                    return;
-                inputX = touch.position.x >
-                         Screen.width / 2f ? 1f : -1f;
-            }
+            var inputX = GetHorizontalAxisFromCenter();
 
             _rb.velocity = new Vector2(inputX * speed, 0f);
 

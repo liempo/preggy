@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.Experimental.U2D.Animation;
+using static Common.Scripts.Controls;
 
 namespace Common.Scripts {
     public class Character : MonoBehaviour {
 
         // To be shown in the inpsector
         public float speed = 1f;
+        public bool centerMode;
 
         // Internal variables
         private Animator _animator;
@@ -30,8 +32,9 @@ namespace Common.Scripts {
             _animator.SetBool(IsRunning, false);
 
             // Check for horizontal input
-            // TODO Add a touch input here too
-            var inputX = Input.GetAxis("Horizontal");
+            var inputX = centerMode ?
+                GetHorizontalAxisFromCenter() :
+                Input.GetAxis("Horizontal");
 
             // Check first if the object should transform
             if (inputX == 0)

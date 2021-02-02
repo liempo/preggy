@@ -5,17 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9237080e-dfd0-4638-9b27-be4cb7212af7" name="Default Changelist" comment="Better character skin swapping">
+      <change afterPath="$PROJECT_DIR$/Assets/Common/Scripts/Controls.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Common/Scripts/Controls.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.preggy.unity/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.preggy.unity/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.preggy.unity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.preggy.unity/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Catch/Catch.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catch/Catch.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Catch/Scripts/Catch.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Catch/Scripts/Catch.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Catch/Scripts/SpawnItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catch/Scripts/SpawnItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Catch/Scripts/Spawnable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catch/Scripts/Spawnable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Catch/Scripts/Spawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Catch/Scripts/Spawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/External/Modern UI Pack/Fonts/OpenSans-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/External/Modern UI Pack/Fonts/OpenSans-Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Menu/Game Over.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Menu/Game Over.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Menu/Main Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Menu/Main Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Breakout/Scripts/Paddle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Breakout/Scripts/Paddle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Common/Scripts/Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Common/Scripts/Character.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,11 +29,9 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Users/Liempo/Documents/preggy.unity/Assets/Breakout/Scripts/Paddle.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Liempo/Documents/preggy.unity/Assets/Breakout/Breakout.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B9928817-6026-4650-AF20-035B53BF15A8/51/a26c0d7a/Input.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.1/Scripts/Runtime/TMP_InputField.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Liempo/Documents/preggy.unity/Assets/Breakout/Scripts/Ball.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Liempo/Documents/preggy.unity/Assets/Common/Scripts/Manager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Liempo/Documents/preggy.unity/ProjectSettings/ProjectSettings.asset" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -66,7 +59,6 @@
       <option value="$PROJECT_DIR$/Assets/Menu/Scripts/QuestionArea.cs" />
       <option value="$PROJECT_DIR$/Assets/Menu/Scripts/Rating.cs" />
       <option value="$PROJECT_DIR$/Assets/Menu/Scripts/GameOver.cs" />
-      <option value="$PROJECT_DIR$/Assets/Common/Scripts/Character.cs" />
       <option value="$PROJECT_DIR$/Assets/Common/JSON/stages.json" />
       <option value="$PROJECT_DIR$/Assets/Menu/Scripts/CharacterArea.cs" />
       <option value="$PROJECT_DIR$/Assets/Catch/Scripts/SpawnType.cs" />
@@ -76,8 +68,10 @@
       <option value="$PROJECT_DIR$/Assets/Catch/Scripts/Spawnable.cs" />
       <option value="$PROJECT_DIR$/Assets/Catch/Scripts/Spawner.cs" />
       <option value="$PROJECT_DIR$/Assets/Breakout/Scripts/Ball.cs" />
-      <option value="$PROJECT_DIR$/Assets/Breakout/Scripts/Paddle.cs" />
       <option value="$PROJECT_DIR$/Assets/Common/Scripts/Manager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Breakout/Scripts/Paddle.cs" />
+      <option value="$PROJECT_DIR$/Assets/Common/Scripts/Controls.cs" />
+      <option value="$PROJECT_DIR$/Assets/Common/Scripts/Character.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1mKzjvsqPAb54VEZpywWAyT4vo3" />
@@ -143,7 +137,8 @@
       <workItem from="1612151755646" duration="600000" />
       <workItem from="1612160555126" duration="3519000" />
       <workItem from="1612182758055" duration="26584000" />
-      <workItem from="1612263085965" duration="7962000" />
+      <workItem from="1612263085965" duration="12966000" />
+      <workItem from="1612283418616" duration="1594000" />
     </task>
     <task id="LOCAL-00001" summary="Fix CharacterArea.cs namespace">
       <created>1612195005444</created>
@@ -173,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612268953819</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Set project default orientation to portrait">
+      <created>1612283686458</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1612283686459</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,6 +200,7 @@
     <MESSAGE value="Fix CharacterArea.cs namespace" />
     <MESSAGE value="Better character skin swapping" />
     <MESSAGE value="Breakout code cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Breakout code cleanup" />
+    <MESSAGE value="Set project default orientation to portrait" />
+    <option name="LAST_COMMIT_MESSAGE" value="Set project default orientation to portrait" />
   </component>
 </project>
