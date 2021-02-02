@@ -1,38 +1,50 @@
-﻿using Michsky.UI.ModernUIPack;
+﻿using Common.Scripts;
+using Michsky.UI.ModernUIPack;
 using TMPro;
 using UnityEngine;
 
 namespace Menu.Scripts {
     public class CharacterArea : MonoBehaviour {
 
-        private void Start() {
-            // Set default selection to first index
-            GetComponentInChildren<HorizontalSelector>()
-                .defaultIndex = 0;
-        }
+        private TMP_InputField _input;
+        private HorizontalSelector _selector;
+        private Character _character;
 
-        private void OnEnable() {
-            // Load PlayerPrefs
-            if (PlayerPrefs.HasKey("Name"))
-                GetComponentInChildren<TMP_InputField>()
-                    .text = PlayerPrefs.GetString("Name");
+        private void Start() {
+            _input = GetComponentInChildren
+                <TMP_InputField>(true);
+            _selector = GetComponentInChildren
+                <HorizontalSelector>(true);
+            _character = GetComponentInChildren
+                <Character>(true);
+
+            // Set data to components based on PlayerPrefs
+            _input.text = PlayerPrefs.HasKey("Name") ?
+                PlayerPrefs.GetString("Name") : "";
+            _input.onEndEdit.AddListener(SetName);
 
             if (PlayerPrefs.HasKey("Character")) {
-                var selector = GetComponentInChildren
-                    <HorizontalSelector>();
-                var character = PlayerPrefs
+                var characterName = PlayerPrefs
                     .GetString("Character");
 
-                var selected = 0;
-                for (var i = 0; i < selector.itemList.Count; i++) {
-                    var item = selector.itemList[i];
+                // Find character in _selector list
+                foreach (var item in _selector.itemList)
+                    if (item.itemTitle == characterName)
+                        _selector.index = _selector.itemList.IndexOf(item);
+                _selector.UpdateUI();
 
-                    if (item.itemTitle == character)
-                        selected = i;
-                }
-                selector.index = selected;
-            } else PlayerPrefs.SetString(
-                "Character", "Angie");
+                // Swap the character's skin
+                _character.Swap(characterName);
+            }
+        }
+
+        public void SetName(string newName) {
+            PlayerPrefs.SetString("Name", newName);
+        }
+
+        public void SetCharacter(string newCharacter) {
+            PlayerPrefs.SetString("Character", newCharacter);
+            _character.Swap(newCharacter);
         }
     }
 }
