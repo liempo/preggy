@@ -10,8 +10,14 @@
         <e p="Breakout" t="Include">
           <e p="Scripts" t="Include">
             <e p="Ball.cs" t="Include" />
-            <e p="Breakout.cs" t="Include" />
             <e p="Paddle.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Catch" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="Spawnable.cs" t="Include" />
+            <e p="Spawner.cs" t="Include" />
+            <e p="SpawnItem.cs" t="Include" />
           </e>
         </e>
         <e p="Common" t="Include">
