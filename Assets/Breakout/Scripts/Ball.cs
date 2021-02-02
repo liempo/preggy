@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics.CodeAnalysis;
+using Common.Scripts;
 using UnityEngine;
 
 namespace Breakout.Scripts {
@@ -7,7 +8,7 @@ namespace Breakout.Scripts {
         public float initialVelocity = 600f;
         public int pointPerHit = 50;
         private Vector3 _initialPosition;
-        private Breakout _manager;
+        private Manager _manager;
         private bool _isPlaying;
 
         // Private members for components
@@ -15,14 +16,14 @@ namespace Breakout.Scripts {
 
         private void Start() {
             _rb = GetComponent<Rigidbody2D>();
-            _manager = FindObjectOfType<Breakout>();
+            _manager = FindObjectOfType<Manager>();
             _initialPosition = transform.position;
         }
 
         private void FixedUpdate() {
-            // If the game is running and the ball is not playing
+            // If the timer is running and the ball is not playing
             // Drop the fucking ball set it to playing
-            if (_manager.isGameRunning) {
+            if (_manager.isTimerRunning) {
                 if (_isPlaying) return;
                 _isPlaying = true;
                 _rb.isKinematic = false;
@@ -55,7 +56,6 @@ namespace Breakout.Scripts {
             } else if (other.gameObject.CompareTag("Ground")) {
                 if (_manager.lives > 0)
                     _manager.lives -= 1;
-                _manager.isGameRunning = false;
                 _manager.isTimerRunning = false;
             }
         }

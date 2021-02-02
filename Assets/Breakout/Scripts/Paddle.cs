@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Common.Scripts;
+using UnityEngine;
 
 namespace Breakout.Scripts {
     public class Paddle : MonoBehaviour {
@@ -7,20 +8,20 @@ namespace Breakout.Scripts {
         public float xMax;
         public float speed;
         private Vector3 _initialPosition;
-        private Breakout _manager;
+        private Manager _manager;
 
         // Private members for components
         private Rigidbody2D _rb;
 
         private void Start() {
             _rb = GetComponent<Rigidbody2D>();
-            _manager = FindObjectOfType<Breakout>();
+            _manager = FindObjectOfType<Manager>();
             _initialPosition = transform.position;
         }
 
         private void FixedUpdate() {
             // Do not move paddle if game not started
-            if (!_manager.isGameRunning) {
+            if (!_manager.isTimerRunning) {
                 transform.position = _initialPosition;
                 return;
             }
