@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Experimental.U2D.Animation;
 using static Common.Scripts.Controls;
 
@@ -9,6 +8,7 @@ namespace Common.Scripts {
         // To be shown in the inpsector
         public float speed = 1f;
         public float jumpForce = 5f;
+        public bool isJumping;
         public bool jumpEnabled;
         public bool runEnabled;
         public bool centerMode;
@@ -72,6 +72,7 @@ namespace Common.Scripts {
             if (!Input.GetButton("Jump") ||
                 _animator.GetBool(IsJumping)) return;
 
+            isJumping = true;
             _animator.SetBool(IsJumping, true);
 
             var jumpVelocity = new Vector2(0, jumpForce);
@@ -79,8 +80,9 @@ namespace Common.Scripts {
             _rb.AddForce(jumpVelocity, ForceMode2D.Impulse);
         }
 
-        private void OnCollisionEnter2D(Collision2D other) {
+        private void OnCollisionEnter2D() {
             _animator.SetBool(IsJumping, false);
+            isJumping = false;
         }
 
         public void Swap(string characterName) {

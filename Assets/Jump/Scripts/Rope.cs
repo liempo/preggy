@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Common.Scripts;
 using UnityEngine;
 
 namespace Jump.Scripts {
@@ -10,7 +11,8 @@ namespace Jump.Scripts {
         [Header("Rope Anchors")]
         public Transform startAnchor;
         public Transform endAnchor;
-        public float anchorSpeed;
+        public float anchorTargetSpeed;
+        private float _currentAnchorSpeed;
         public Vector2 moveTarget = new Vector3(0f, 1f);
         private Vector2 _startAnchorOrigin;
         private Vector2 _endAnchorOrigin;
@@ -27,17 +29,19 @@ namespace Jump.Scripts {
 
         [Header("Rope Physics")]
         public Vector2 gravity = new Vector2(0f, -1f);
-        public float ropeSpeed = 1f;
         public int constraintIterations = 50;
 
         [Header("Ground Collision")]
-        public Collider2D ground;
         private EdgeCollider2D _collider;
-        public bool isCollidingWithGround;
+
+        [Header("Game Mechanics")]
+        public Character character;
+        private Manager _manager;
 
         private void Start() {
             _renderer = GetComponent<LineRenderer>();
             _collider = GetComponent<EdgeCollider2D>();
+            _manager = FindObjectOfType<Manager>();
             _segments = new List<Segment>();
 
             // Setup the renderer
@@ -60,6 +64,24 @@ namespace Jump.Scripts {
             Simulate();
             MoveAnchors();
             UpdateCollider();
+
+            // If the timer is running
+            // and the anchors are not moving
+            // move the fucking anchors!
+            if (_manager.isTimerRunning) {
+                if (_currentAnchorSpeed > 0f)
+                    return;
+                _currentAnchorSpeed = anchorTargetSpeed;
+                character.jumpEnabled = true;
+            }
+
+            // If the timer is not running
+            // and the anchors are moving
+            // Stop the fucking anchors!!
+            else {
+                if (_currentAnchorSpeed > 0f)
+                    _currentAnchorSpeed = 0f;
+            }
         }
 
         private void Build() {
@@ -157,14 +179,16 @@ namespace Jump.Scripts {
         }
 
         private void MoveAnchors() {
+            var lerpValue = Mathf.PingPong(
+                Time.fixedTime * _currentAnchorSpeed, 1);
             var newStartAnchorPosition = Vector3.Lerp(
                 _startAnchorOrigin,
                 _startAnchorOrigin + moveTarget,
-                Mathf.PingPong(Time.fixedTime * anchorSpeed, 1));
+                lerpValue);
             var newEndAnchorPosition = Vector3.Lerp(
                 _endAnchorOrigin,
                 _endAnchorOrigin + moveTarget,
-                Mathf.PingPong(Time.fixedTime * anchorSpeed, 1));
+                lerpValue);
 
             // Check if anchors are moving up or down
             // NOTE: check only one of the anchor for optimization
@@ -187,11 +211,14 @@ namespace Jump.Scripts {
         }
 
         private void OnTriggerEnter2D(Collider2D other) {
-            isCollidingWithGround = other.gameObject.CompareTag("Ground");
-        }
-
-        private void OnTriggerExit2D(Collider2D other) {
-            isCollidingWithGround = !other.gameObject.CompareTag("Ground");
+            if (other.gameObject.CompareTag("Ground")
+                && _manager.isTimerRunning)
+                if (character.isJumping) {
+                    _manager.score++;
+                } else {
+                    _manager.lives--;
+                    _manager.isTimerRunning = false;
+                }
         }
 
         private struct Segment {
