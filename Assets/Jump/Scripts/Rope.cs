@@ -10,10 +10,10 @@ namespace Jump.Scripts {
         [Header("Rope Anchors")]
         public Transform startAnchor;
         public Transform endAnchor;
-        public float moveSpeed;
-        public Vector3 moveTarget = new Vector3(0f, 1f, 0);
-        private Vector3 _startAnchorOrigin;
-        private Vector3 _endAnchorOrigin;
+        public float anchorSpeed;
+        public Vector2 moveTarget = new Vector3(0f, 1f);
+        private Vector2 _startAnchorOrigin;
+        private Vector2 _endAnchorOrigin;
 
         [Header("Rope Configuration")]
         // lineThickness: Width of the line to be rendered
@@ -22,14 +22,18 @@ namespace Jump.Scripts {
         public float lineThickness = 0.1f;
         public float segmentSpacing = 0.25f;
         public int segmentCount = 35;
+        public int upwardsSortOrder = 10;
+        public int downwardsSortOrder;
 
         [Header("Rope Physics")]
-        public Vector3 gravity = new Vector3(0f, -1f, 0f);
+        public Vector2 gravity = new Vector2(0f, -1f);
+        public float ropeSpeed = 1f;
         public int constraintIterations = 50;
 
-        [Header("Miscellaneous")]
-        public bool isColliderEnabled;
+        [Header("Ground Collision")]
+        public Collider2D ground;
         private EdgeCollider2D _collider;
+        public bool isCollidingWithGround;
 
         private void Start() {
             _renderer = GetComponent<LineRenderer>();
@@ -59,13 +63,7 @@ namespace Jump.Scripts {
         }
 
         private void Build() {
-            // New fancy way to check for null
-            if (!( Camera.main is { } ))
-                return;
-
-            var start = Camera.main.
-                ScreenToWorldPoint(Input.mousePosition);
-
+            var start = _startAnchorOrigin;
             // Attach each segment to each other
             for (var i = 0; i < segmentCount; i++) {
                 _segments.Add(new Segment(start));
@@ -148,41 +146,66 @@ namespace Jump.Scripts {
                     _segments[i] = first;
                     _segments[i + 1] = second;
                 }
+
+                // IMPORTANT!! PLEASE READ!!
+                // Since Unity's colliders are not working
+                // because I'm manually setting the colliders
+                // points, therefore, collision events won't
+                // trigger. So fuck it! I'm gonna check it myself
+                // isRopeColliding = _rectangle.Contains(_segments[i].Current);
             }
         }
 
+        private void MoveAnchors() {
+            var newStartAnchorPosition = Vector3.Lerp(
+                _startAnchorOrigin,
+                _startAnchorOrigin + moveTarget,
+                Mathf.PingPong(Time.fixedTime * anchorSpeed, 1));
+            var newEndAnchorPosition = Vector3.Lerp(
+                _endAnchorOrigin,
+                _endAnchorOrigin + moveTarget,
+                Mathf.PingPong(Time.fixedTime * anchorSpeed, 1));
+
+            // Check if anchors are moving up or down
+            // NOTE: check only one of the anchor for optimization
+            _renderer.sortingOrder =
+                newStartAnchorPosition.y <
+                startAnchor.position.y ?
+                upwardsSortOrder :
+                downwardsSortOrder;
+
+            startAnchor.position = newStartAnchorPosition;
+            endAnchor.position = newEndAnchorPosition;
+        }
+
         private void UpdateCollider() {
-            // Create an array of the current positions
+            // Get segments and convert to array
             var positions = new Vector2[segmentCount];
             for (var i = 0; i < segmentCount; i++)
                 positions[i] = _segments[i].Current;
             _collider.points = positions;
         }
 
-        private void MoveAnchors() {
-            startAnchor.position = Vector3.Lerp(
-                _startAnchorOrigin,
-                _startAnchorOrigin + moveTarget,
-                Mathf.PingPong(Time.fixedTime * moveSpeed, 1));
-            endAnchor.position = Vector3.Lerp(
-                _endAnchorOrigin,
-                _endAnchorOrigin + moveTarget,
-                Mathf.PingPong(Time.fixedTime * moveSpeed, 1));
+        private void OnTriggerEnter2D(Collider2D other) {
+            isCollidingWithGround = other.gameObject.CompareTag("Ground");
+        }
+
+        private void OnTriggerExit2D(Collider2D other) {
+            isCollidingWithGround = !other.gameObject.CompareTag("Ground");
         }
 
         private struct Segment {
-            public Vector3 Current;
-            public Vector3 Previous;
+            public Vector2 Current;
+            public Vector2 Previous;
 
-            public Segment(Vector3 position) {
+            public Segment(Vector2 position) {
                 Current = position;
                 Previous = position;
             }
 
-            public Vector3 GetVelocity() {
+            public Vector2 GetVelocity() {
                 return Current - Previous;
             }
         }
-
     }
 }
