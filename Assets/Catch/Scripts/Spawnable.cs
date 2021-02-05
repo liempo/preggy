@@ -26,9 +26,10 @@ namespace Catch.Scripts {
                     _manager.lives--;
                 else _manager.score += points;
             else if (other.gameObject.CompareTag("Ground"))
-                if (_type == Good)
+                if (_type == Good) {
                     _manager.lives--;
-                else _manager.score += points;
+                    _manager.isTimerRunning = false;
+                } else _manager.score += points;
             Destroy(gameObject);
         }
     }
