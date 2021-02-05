@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.Experimental.U2D.Animation;
 using static Common.Scripts.Controls;
 
@@ -7,14 +8,21 @@ namespace Common.Scripts {
 
         // To be shown in the inpsector
         public float speed = 1f;
+        public float jumpForce = 5f;
+        public bool jumpEnabled;
+        public bool runEnabled;
         public bool centerMode;
 
         // Internal variables
+        private Rigidbody2D _rb;
         private Animator _animator;
         private static readonly int IsRunning
             = Animator.StringToHash("IsRunning");
+        private static readonly int IsJumping
+            = Animator.StringToHash("isJumping");
 
         private void Start() {
+            _rb = GetComponent<Rigidbody2D>();
             _animator = GetComponent<Animator>();
 
             // Swap character skin if set
@@ -24,7 +32,10 @@ namespace Common.Scripts {
         }
 
         private void FixedUpdate() {
-            Run();
+            if (runEnabled)
+                Run();
+            if (jumpEnabled)
+                Jump();
         }
 
         private void Run() {
@@ -53,6 +64,23 @@ namespace Common.Scripts {
             transform.position +=
                 (inputX > 0 ? Vector3.right : Vector3.left)
                 * (speed * Time.deltaTime);
+        }
+
+
+        private void Jump() {
+            // If didn't jump, or is jumping, skip
+            if (!Input.GetButton("Jump") ||
+                _animator.GetBool(IsJumping)) return;
+
+            _animator.SetBool(IsJumping, true);
+
+            var jumpVelocity = new Vector2(0, jumpForce);
+            _rb.velocity = Vector2.zero;
+            _rb.AddForce(jumpVelocity, ForceMode2D.Impulse);
+        }
+
+        private void OnCollisionEnter2D(Collision2D other) {
+            _animator.SetBool(IsJumping, false);
         }
 
         public void Swap(string characterName) {
