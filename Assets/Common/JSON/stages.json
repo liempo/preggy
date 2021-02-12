@@ -7,6 +7,10 @@
     {
       "title": "Stage 2",
       "scene": "Catch"
+    },
+    {
+      "title": "Stage 3",
+      "scene": "Jump"
     }
   ]
 }

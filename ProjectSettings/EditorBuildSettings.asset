@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Menu/Main Menu.unity
     guid: 7bf2e7da9269e85488ae4548a0304bfa
   - enabled: 1
-    path: Assets/Menu/Loading.unity
-    guid: d4ab59a44ba8d1347b179147323abc9f
-  - enabled: 1
     path: Assets/Menu/Game Over.unity
     guid: 2c00d5a77ba15104d91d716a19733e63
   - enabled: 1
@@ -20,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Catch/Catch.unity
     guid: 0e9aa6fad4a9b504cab8fc1442532800
+  - enabled: 1
+    path: Assets/Jump/Jump.unity
+    guid: bfef00b119b46dd498d23bbaeaf3f48d
   m_configObjects: {}
