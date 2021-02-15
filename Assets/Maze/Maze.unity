@@ -255,6 +255,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08b8b864f07b46546a5cf5eea63c6df1, type: 3}
+--- !u!1 &243771686 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 49265164829801856, guid: 08b8b864f07b46546a5cf5eea63c6df1, type: 3}
+  m_PrefabInstance: {fileID: 243771685}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &243771687 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 49265166326568784, guid: 08b8b864f07b46546a5cf5eea63c6df1, type: 3}
+  m_PrefabInstance: {fileID: 243771685}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &505044874 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1499299996336346790, guid: 18603f5285b08af47a560146aebc05c9, type: 3}
@@ -303,8 +313,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 074e8fac0ee7401491a85943ed3dff14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hudPanel: {fileID: 0}
-  pausePanel: {fileID: 0}
+  hudPanel: {fileID: 243771687}
+  pausePanel: {fileID: 243771686}
   score: 0
   lives: 3
   timeRemaining: 60

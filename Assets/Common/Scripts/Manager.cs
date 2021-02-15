@@ -12,14 +12,16 @@ namespace Common.Scripts {
         [Header("Manager Settings")]
         public int score;
         public int lives = 3;
+        public bool isTimerRunning;
         public float timeRemaining = 60f;
+
+        [Header("Rating per Star")]
         public int[] rating = new int[3];
 
         // Save scene name for Retry()
         private string _scene;
 
         // Control variables
-        [HideInInspector] public bool isTimerRunning;
         private bool _isGameOver;
 
         // Other game objects and components
