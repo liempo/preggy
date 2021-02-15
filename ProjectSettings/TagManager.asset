@@ -9,6 +9,7 @@ TagManager:
   - Ball
   - Ground
   - Paddle
+  - Maze
   layers:
   - Default
   - TransparentFX

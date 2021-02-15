@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Common.Scripts;
 using UnityEngine;
 
 namespace Maze.Scripts {
@@ -6,6 +7,7 @@ namespace Maze.Scripts {
 
         private LineRenderer _renderer;
         private EdgeCollider2D _collider;
+        private Manager _manager;
         private List<Vector2> _path;
 
         [Header("Path Settings")]
@@ -16,23 +18,28 @@ namespace Maze.Scripts {
         public float straightenThreshold = 0.5f;
 
         private void Start() {
+            _manager = FindObjectOfType<Manager>();
             _renderer = GetComponent<LineRenderer>();
             _collider = GetComponent<EdgeCollider2D>();
-            _path = new List<Vector2> {start.position};
+            _path = new List<Vector2>();
 
             // Setup the renderer
             _renderer.useWorldSpace = false;
             _renderer.startWidth = lineThickness;
             _renderer.endWidth = lineThickness;
+
+            // Reset the path
+            Reset();
         }
 
         private void Update() {
-            ProcessInput();
+            if (_manager.isTimerRunning)
+                ProcessInput();
             Draw();
         }
 
         private void OnTriggerEnter2D(Collider2D other) {
-            Debug.Log("Engk");
+            Reset();
         }
 
         private void ProcessInput() {
@@ -77,6 +84,15 @@ namespace Maze.Scripts {
                 positions[i] = _path[i];
             _renderer.positionCount = _path.Count;
             _renderer.SetPositions(positions);
+        }
+
+        private void Reset() {
+            // Clear path
+            _path.Clear();
+
+            // Add first position
+            _path.Add(start.position);
+            _renderer.positionCount = 0;
         }
 
         private bool IsFinished(Vector2 point) {
