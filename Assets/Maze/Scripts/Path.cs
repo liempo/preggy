@@ -40,6 +40,7 @@ namespace Maze.Scripts {
 
         private void OnTriggerEnter2D(Collider2D other) {
             Reset();
+            _manager.lives--;
         }
 
         private void ProcessInput() {
