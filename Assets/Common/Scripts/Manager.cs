@@ -15,6 +15,15 @@ namespace Common.Scripts {
         public bool isTimerRunning;
         public float timeRemaining = 60f;
 
+        [Header("HUD Settings")]
+        public int scoreTextWidth = 4;
+        public int timerTextWidth = 2;
+        public int livesTextWidth = 1;
+        public string timerTextFormat = "T-{0}";
+        public string scoreTextFormat = "{0}";
+        public string livesTextFormat = "{0} lives left. \nTap to start.";
+        public bool showLivesOnPlay;
+
         [Header("Rating per Star")]
         public int[] rating = new int[3];
 
@@ -55,12 +64,24 @@ namespace Common.Scripts {
                 return;
 
             // Update the HUD components
-            _hudScoreText.text = score.ToString()
-                .PadLeft(4, '0');
-            _hudTimerText.text = "T-" + ((int) timeRemaining).ToString()
-                .PadLeft(2, '0');
-            _hudLivesText.text = lives + " lives left.\nTouch to start.";
-            _unpausedGameObject.SetActive(!isTimerRunning);
+            var scoreString = score.ToString()
+                .PadLeft(scoreTextWidth, '0');
+            _hudScoreText.text = string.Format(
+                scoreTextFormat, scoreString);
+
+            var timerString = ((int) timeRemaining).ToString()
+                .PadLeft(timerTextWidth, '0');
+            _hudTimerText.text = string.Format(
+                    timerTextFormat, timerString);
+
+            var livesString = lives.ToString()
+                .PadLeft(livesTextWidth, '0');
+            _hudLivesText.text = string.Format(
+                livesTextFormat, livesString);
+
+            _unpausedGameObject.SetActive(
+                // If show and timer not running
+                showLivesOnPlay || !isTimerRunning);
 
             // Check for time remaining
             // and tick the timer
