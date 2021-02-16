@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Common.Scripts;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Maze.Scripts {
     public class Path : MonoBehaviour {
@@ -17,6 +18,10 @@ namespace Maze.Scripts {
         public float lineThickness = 0.1f;
         public float straightenThreshold = 0.5f;
 
+        [Header("Events")]
+        public UnityEvent onVertexAdded;
+        public UnityEvent onCollided;
+        public UnityEvent onFinished;
         private void Start() {
             _manager = FindObjectOfType<Manager>();
             _renderer = GetComponent<LineRenderer>();
@@ -33,14 +38,23 @@ namespace Maze.Scripts {
         }
 
         private void Update() {
-            if (_manager.isTimerRunning)
+            if (_manager.isTimerRunning) {
+                // Update livesText
+                _manager.livesTextFormat = "LIVES: {0}";
+                // Start processing input
                 ProcessInput();
+            }
             Draw();
         }
 
         private void OnTriggerEnter2D(Collider2D other) {
-            Reset();
-            _manager.lives--;
+            if (other.CompareTag("Maze")) {
+                _manager.lives--;
+
+                // Update objects
+                onCollided?.Invoke();
+                Reset();
+            }
         }
 
         private void ProcessInput() {
@@ -59,6 +73,8 @@ namespace Maze.Scripts {
 
             // Add only if there's something to process
             if (point != placeholder) {
+                onVertexAdded?.Invoke();
+
                 Vector2 worldPoint = camera
                     .ScreenToWorldPoint(point);
 
@@ -72,10 +88,16 @@ namespace Maze.Scripts {
 
                 // Update collider
                 _collider.points = _path.ToArray();
+                if (!_collider.enabled)
+                    _collider.enabled = true;
 
                 // Check if finished line is reached
-                if (IsFinished(worldPoint))
-                    Debug.Log("Finished");
+                if (IsFinished(worldPoint)) {
+                    _manager.score++;
+
+                    onFinished?.Invoke();
+                    Reset();
+                }
             }
         }
 
@@ -94,6 +116,9 @@ namespace Maze.Scripts {
             // Add first position
             _path.Add(start.position);
             _renderer.positionCount = 0;
+
+            // Disable the collider
+            _collider.enabled = false;
         }
 
         private bool IsFinished(Vector2 point) {
