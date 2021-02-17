@@ -12,8 +12,8 @@ namespace Maze.Scripts {
 
         [Header("Maze Settings")]
         public Color colorNormal = Color.white;
-        public Color colorError;
-        public Color colorFinished;
+        public Color colorError = Color.red;
+        public Color colorFinished = Color.green;
         public Difficulty difficulty = Difficulty.Easy;
 
         [Header("Maze List (By Difficulty)")]
@@ -36,15 +36,21 @@ namespace Maze.Scripts {
             Generate();
         }
 
+        // Suppress expensive null check
+        // since it's only being checked at Start
+        // ReSharper disable Unity.PerformanceAnalysis
         private void Generate() {
             // Get a random item from list
             Sprite sprite = null;
 
             while (sprite == null || _done.Contains(sprite))
                 sprite = difficulty switch {
-                    Difficulty.Easy => easy[Random.Range(0, easy.Count)],
-                    Difficulty.Medium => medium[Random.Range(0, medium.Count)],
-                    Difficulty.Hard => hard[Random.Range(0, hard.Count)],
+                    Difficulty.Easy =>
+                        easy[Random.Range(0, easy.Count)],
+                    Difficulty.Medium =>
+                        medium[Random.Range(0, medium.Count)],
+                    Difficulty.Hard =>
+                        hard[Random.Range(0, hard.Count)],
                     _ => throw new ArgumentOutOfRangeException()
                 };
 
@@ -52,14 +58,13 @@ namespace Maze.Scripts {
             _renderer.sprite = sprite;
             _done.Add(sprite);
 
-            if (_collider != null) {
-                // Remove old collider
+            // Remove old collider
+            if (_collider != null)
                 Destroy(_collider);
 
-                // Re-add the polygon collider
-                _collider = gameObject.AddComponent
-                    <PolygonCollider2D>();
-            }
+            // Re-add the polygon collider
+            _collider = gameObject.AddComponent
+                <PolygonCollider2D>();
         }
 
         public void TriggerError() {

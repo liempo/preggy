@@ -49,11 +49,12 @@ namespace Maze.Scripts {
 
         private void OnTriggerEnter2D(Collider2D other) {
             if (other.CompareTag("Maze")) {
-                _manager.lives--;
-
                 // Update objects
+                _manager.lives--;
                 onCollided?.Invoke();
-                Reset();
+
+                // Reset path in 1.5 secs
+                Invoke(nameof(Reset), 1f);
             }
         }
 

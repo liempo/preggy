@@ -437,6 +437,9 @@ MonoBehaviour:
   finish: {fileID: 1599287553}
   lineThickness: 0.15
   straightenThreshold: 0.5
+  onVertexAdded:
+    m_PersistentCalls:
+      m_Calls: []
   onCollided:
     m_PersistentCalls:
       m_Calls:
@@ -818,8 +821,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorNormal: {r: 1, g: 1, b: 1, a: 1}
-  colorError: {r: 1, g: 0.53333336, b: 0.53333336, a: 1}
-  colorFinished: {r: 0.654902, g: 1, b: 0.53333336, a: 1}
+  colorError: {r: 1, g: 0, b: 0, a: 1}
+  colorFinished: {r: 0, g: 1, b: 0, a: 1}
   difficulty: 0
   easy:
   - {fileID: 21300000, guid: ccaa95cd61a0daa41b4c7a8961c5891f, type: 3}
