@@ -69,8 +69,10 @@ namespace Common.Scripts {
 
         private void Jump() {
             // If didn't jump, or is jumping, skip
-            if (!Input.GetButton("Jump") ||
-                _animator.GetBool(IsJumping)) return;
+            if (_animator.GetBool(IsJumping))
+                return;
+            if (!Input.GetButton("Jump") && Input.touchCount != 1)
+                return;
 
             isJumping = true;
             _animator.SetBool(IsJumping, true);

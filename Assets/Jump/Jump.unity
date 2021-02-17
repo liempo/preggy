@@ -492,9 +492,16 @@ MonoBehaviour:
   pausePanel: {fileID: 1694445206}
   score: 0
   lives: 3
-  timeRemaining: 30
-  rating: 0a000000140000001e000000
   isTimerRunning: 0
+  timeRemaining: 30
+  scoreTextWidth: 4
+  timerTextWidth: 2
+  livesTextWidth: 1
+  timerTextFormat: T-{0}
+  scoreTextFormat: '{0}'
+  livesTextFormat: "{0} lives left. \nTap to start."
+  showLivesOnPlay: 0
+  rating: 0a000000140000001e000000
 --- !u!1001 &1694445205
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -827,7 +834,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5546347782300392692, guid: 18603f5285b08af47a560146aebc05c9, type: 3}
       propertyPath: jumpEnabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5774207258378268333, guid: 18603f5285b08af47a560146aebc05c9, type: 3}
       propertyPath: m_Mass
