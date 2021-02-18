@@ -24,7 +24,7 @@ namespace Common.Scripts {
         }
 
         public void SetRemaining(int value) {
-            if (value > count) return;
+            if (value >= count || value < 0) return;
             for (var i = 0; i < count; i++) {
                 if (i < value) {
                     if (!_objects[i].activeSelf)
