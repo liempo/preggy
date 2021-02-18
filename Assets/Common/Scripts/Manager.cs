@@ -57,16 +57,15 @@ namespace Common.Scripts {
         private void Update() {
             if (IsInteracted()) {
                 // If countdown is not started
-                // the player interacted then
+                // and there still time to tick
                 // --> Start countdown
+                // else the game must be paused
+                // --> resume the game
                 if (!isCountdownStarted && !isGameRunning) {
                     if (countdownTime > 0) {
                         onCountdownStarted?.Invoke();
                         isCountdownStarted = true;
-                    } else {
-                        onGameResumed?.Invoke();
-                        isGameRunning = true;
-                    }
+                    } else SetPause(false, false);
                 }
             }
         }
@@ -126,16 +125,14 @@ namespace Common.Scripts {
                 pause.gameObject.SetActive(value);
             }
 
-            if (isGameRunning) {
-                if (value) {
-                    onGamePaused?.Invoke();
-                    isGameRunning = false;
-                    Time.timeScale = 0.05f;
-                } else {
-                    onGameResumed?.Invoke();
-                    isGameRunning = true;
-                    Time.timeScale = 1f;
-                }
+            if (value) {
+                onGamePaused?.Invoke();
+                isGameRunning = false;
+                Time.timeScale = 0.05f;
+            } else {
+                onGameResumed?.Invoke();
+                isGameRunning = true;
+                Time.timeScale = 1f;
             }
         }
 
@@ -150,6 +147,7 @@ namespace Common.Scripts {
         }
 
         private void Finish() {
+            onGameFinished?.Invoke();
             isGameFinished = true;
             SceneManager.LoadScene("Game Over");
         }
