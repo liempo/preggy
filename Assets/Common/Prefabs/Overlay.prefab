@@ -2800,14 +2800,9 @@ MonoBehaviour:
   message: {fileID: 49265165707412120}
   scoreWidth: 4
   timerWidth: 2
-  livesWidth: 1
   countdownWidth: 1
-  timerFormat: T-{0}
+  timerFormat: '{0}'
   scoreFormat: '{0}'
-  livesFormat: '{0}'
-  countdownFormat: 'Starting in
-
-    {0}'
 --- !u!1 &49265166516966372
 GameObject:
   m_ObjectHideFlags: 0
@@ -3728,9 +3723,9 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 0
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
+  m_Spacing: 20
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
