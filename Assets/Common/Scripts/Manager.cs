@@ -12,8 +12,8 @@ namespace Common.Scripts {
         [Header("Game Settings")]
         public int score;
         public int lives;
-        public float time;
-        public float countdown;
+        public float gameTime;
+        public float countdownTime;
         public bool isGameRunning;
         public bool isGameFinished;
         public bool isCountdownStarted;
@@ -22,9 +22,10 @@ namespace Common.Scripts {
         [Header("Game Events")]
         public UnityEvent onCountdownStarted;
         public UnityEvent onGameStarted;
+        public UnityEvent onGamePaused;
+        public UnityEvent onGameResumed;
         public UnityEvent onGameFinished;
 
-        [Header("Rating per Star")]
         public int[] rating = new int[3];
 
         // Internal game attributes
@@ -38,64 +39,103 @@ namespace Common.Scripts {
 
         private void Start() {
             UpdateUI();
+
+            // Enable event debug logs
+            onCountdownStarted.AddListener(
+                delegate { Debug.Log("onCountdownStarted"); });
+            onGameStarted.AddListener(
+                delegate { Debug.Log("onGameStarted"); });
+            onGamePaused.AddListener(
+                delegate { Debug.Log("onGamePaused"); });
+            onGameResumed.AddListener(
+                delegate { Debug.Log("onGameResumed"); });
+            onGameFinished.AddListener(
+                delegate { Debug.Log("onGameFinished"); });
+
+        }
+
+        private void Update() {
+            if (IsInteracted()) {
+                // If countdown is not started
+                // the player interacted then
+                // --> Start countdown
+                if (!isCountdownStarted && !isGameRunning) {
+                    if (countdownTime > 0) {
+                        onCountdownStarted?.Invoke();
+                        isCountdownStarted = true;
+                    } else {
+                        onGameResumed?.Invoke();
+                        isGameRunning = true;
+                    }
+                }
+            }
         }
 
         private void FixedUpdate() {
             if (isGameFinished)
                 return;
 
+            // If the countdown started
+            // --> Tick down the countdown timer to run game
             if (isCountdownStarted) {
-                // If countdown started and game is already running
-                // --> Tick the down the game timer
-                if (isGameRunning) {
-                     if (time > 0)
-                         time -= Time.fixedDeltaTime;
-                     else {
-                         onGameFinished?.Invoke();
-                         Finish();
-                     }
-                }
-
-                // If the countdown started and game is not running
-                // --> Tick down the countdown timer to run game
+                if (countdownTime > 0)
+                    countdownTime -= Time.fixedDeltaTime;
                 else {
-                    if (countdown > 0)
-                        countdown -= Time.fixedDeltaTime;
-                    else {
-                        onGameStarted?.Invoke();
-                        isGameRunning = true;
-                    }
+                    onGameStarted?.Invoke();
+                    isGameRunning = true;
+                    isCountdownStarted = false;
                 }
-
-                // Update UI if game is started
-                UpdateUI();
             }
 
-            // If countdown is not started the player interacted
-            // --> Start the countdown
-            else if (IsInteracted()) {
-                onCountdownStarted?.Invoke();
-                isCountdownStarted = true;
+            // else if game is already running
+            // --> Tick the down the game timer
+            else if (isGameRunning) {
+                if (gameTime > 0)
+                    gameTime -= Time.fixedDeltaTime;
+                else {
+                    onGameFinished?.Invoke();
+                    Finish();
+                }
             }
+
+            // Once the timers are settled
+            // We now deal with th lives
+            if (lives <= 0)
+                Finish();
+
+            // Update UI if game is started
+            UpdateUI();
         }
 
         private void UpdateUI() {
             hud.SetScore(score);
             hud.SetLives(lives);
-            hud.SetTimer((int) time);
-            hud.SetCountdown((int) countdown);
+            hud.SetTimer((int) gameTime);
+            hud.SetCountdown((int) countdownTime);
 
-            // Show only message if game hasn't started
-            hud.SetMessageActive(!isCountdownStarted);
+            // Show only countdown if countdown is started
+            hud.SetCountdownActive(isCountdownStarted);
+
+            // Show only message if game not running
+            hud.SetMessageActive(!isGameRunning);
         }
 
-        public void SetPause(bool value) {
-            hud.gameObject.SetActive(!value);
-            pause.gameObject.SetActive(value);
+        public void SetPause(bool value, bool withUI = true) {
+            if (withUI) {
+                hud.gameObject.SetActive(!value);
+                pause.gameObject.SetActive(value);
+            }
 
-            if (value && isGameRunning) {
-                // TODO invoke event
-                isGameRunning = false;
+            if (isGameRunning) {
+                if (value) {
+                    onGamePaused?.Invoke();
+                    isGameRunning = false;
+                    Time.timeScale = 0.05f;
+                } else {
+                    onGameResumed?.Invoke();
+                    isGameRunning = true;
+                    Time.timeScale = 1f;
+                }
             }
         }
 
@@ -135,8 +175,10 @@ namespace Common.Scripts {
                           == TouchPhase.Began;
             // Check if player pressed space
             var isJump = Input.GetButtonDown("Jump");
+            // Check if player left clicked
+            var isClicked = Input.GetMouseButtonDown(0);
 
-            return isTouch || isJump;
+            return isTouch || isJump || isClicked;
         }
     }
 }
