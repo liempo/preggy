@@ -21,7 +21,6 @@ namespace Common.Scripts {
         [Header("Text Format")]
         public string timerFormat = "{0}";
         public string scoreFormat = "{0}";
-        public string countdownFormat = "Starting in\n{0}";
 
         private void Start() {
             pause.onClick.AddListener(delegate {
@@ -55,10 +54,8 @@ namespace Common.Scripts {
         }
 
         public void SetCountdown(int value) {
-            countdown.text = string.Format(countdownFormat,
-                value.ToString().PadLeft(
-                    countdownWidth, '0')
-            );
+            countdown.text = value.ToString().PadLeft(
+                    countdownWidth, '0');
         }
 
         public void SetMessage(string value) {
@@ -67,6 +64,10 @@ namespace Common.Scripts {
 
         public void SetMessageActive(bool value) {
             message.gameObject.SetActive(value);
+        }
+
+        public void SetCountdownActive(bool value) {
+            countdown.gameObject.SetActive(value);
         }
     }
 }
