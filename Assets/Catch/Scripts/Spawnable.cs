@@ -22,13 +22,16 @@ namespace Catch.Scripts {
 
         private void OnCollisionEnter2D(Collision2D other) {
             if (other.gameObject.CompareTag("Player"))
-                if (_type == Bad)
+                if (_type == Bad) {
                     _manager.lives--;
+                    _manager.hud.SetMessage("Do not catch unhealthy food!");
+                    _manager.SetPause(true, false);
+                }
                 else _manager.score += points;
             else if (other.gameObject.CompareTag("Ground"))
                 if (_type == Good) {
                     _manager.lives--;
-                    _manager.isGameRunning = false;
+                    _manager.SetPause(true, false);
                 } else _manager.score += points;
             Destroy(gameObject);
         }
