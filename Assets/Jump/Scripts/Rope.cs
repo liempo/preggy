@@ -68,7 +68,7 @@ namespace Jump.Scripts {
             // If the timer is running
             // and the anchors are not moving
             // move the fucking anchors!
-            if (_manager.isTimerRunning) {
+            if (_manager.isGameRunning) {
                 if (_currentAnchorSpeed > 0f)
                     return;
                 _currentAnchorSpeed = anchorTargetSpeed;
@@ -212,12 +212,12 @@ namespace Jump.Scripts {
 
         private void OnTriggerEnter2D(Collider2D other) {
             if (other.gameObject.CompareTag("Ground")
-                && _manager.isTimerRunning)
+                && _manager.isGameRunning)
                 if (character.isJumping) {
                     _manager.score++;
                 } else {
                     _manager.lives--;
-                    _manager.isTimerRunning = false;
+                    _manager.isGameRunning = false;
                 }
         }
 

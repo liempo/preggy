@@ -28,7 +28,7 @@ namespace Catch.Scripts {
         }
 
         private void Update() {
-            if (_manager.isTimerRunning && !_spawning) {
+            if (_manager.isGameRunning && !_spawning) {
                 InvokeRepeating(nameof(Spawn),
                     1, 1);
                 _spawning = true;

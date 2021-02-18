@@ -22,7 +22,7 @@ namespace Breakout.Scripts {
 
         private void FixedUpdate() {
             // Do not move paddle if game not started
-            if (!_manager.isTimerRunning) {
+            if (!_manager.isGameRunning) {
                 transform.position = _initialPosition;
                 return;
             }

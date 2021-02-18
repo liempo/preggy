@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Common.Scripts;
 using UnityEngine;
 using UnityEngine.Events;
@@ -38,9 +39,7 @@ namespace Maze.Scripts {
         }
 
         private void Update() {
-            if (_manager.isTimerRunning) {
-                // Update livesText
-                _manager.livesTextFormat = "LIVES: {0}";
+            if (_manager.isGameRunning && !IsFinished()) {
                 // Start processing input
                 ProcessInput();
             }
@@ -59,6 +58,7 @@ namespace Maze.Scripts {
         }
 
         private void ProcessInput() {
+            // Set a place holder that is out of this world, literally.
             var placeholder = new Vector2(-5, -5);
             var point = placeholder;
 
@@ -69,7 +69,7 @@ namespace Maze.Scripts {
                     return;
                 point = touch.position;
                 _path.Add(point);
-            } else if (Input.GetMouseButtonDown(0))
+            } else if (Input.GetMouseButton(0))
                 point = Input.mousePosition;
 
             // Add only if there's something to process
@@ -93,7 +93,7 @@ namespace Maze.Scripts {
                     _collider.enabled = true;
 
                 // Check if finished line is reached
-                if (IsFinished(worldPoint)) {
+                if (IsFinished()) {
                     _manager.score++;
 
                     onFinished?.Invoke();
@@ -122,8 +122,8 @@ namespace Maze.Scripts {
             _collider.enabled = false;
         }
 
-        private bool IsFinished(Vector2 point) {
-            return point.y <= finish.position.y;
+        private bool IsFinished() {
+            return _path.Last().y <= finish.position.y;
         }
 
         private static Vector2 Straighten(

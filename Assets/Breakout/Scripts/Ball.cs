@@ -23,7 +23,7 @@ namespace Breakout.Scripts {
         private void FixedUpdate() {
             // If the timer is running and the ball is not playing
             // Drop the fucking ball set it to playing
-            if (_manager.isTimerRunning) {
+            if (_manager.isGameRunning) {
                 if (_isPlaying) return;
                 _isPlaying = true;
                 _rb.isKinematic = false;
@@ -56,7 +56,7 @@ namespace Breakout.Scripts {
             } else if (other.gameObject.CompareTag("Ground")) {
                 if (_manager.lives > 0)
                     _manager.lives -= 1;
-                _manager.isTimerRunning = false;
+                _manager.isGameRunning = false;
             }
         }
     }

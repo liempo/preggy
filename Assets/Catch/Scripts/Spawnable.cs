@@ -28,7 +28,7 @@ namespace Catch.Scripts {
             else if (other.gameObject.CompareTag("Ground"))
                 if (_type == Good) {
                     _manager.lives--;
-                    _manager.isTimerRunning = false;
+                    _manager.isGameRunning = false;
                 } else _manager.score += points;
             Destroy(gameObject);
         }

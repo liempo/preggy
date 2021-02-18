@@ -1,43 +1,34 @@
-﻿using TMPro;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 namespace Common.Scripts {
     public class Manager : MonoBehaviour {
 
-        [Header("Panels")]
-        public GameObject hudPanel;
-        public GameObject pausePanel;
+        [Header("Components")]
+        public InGameUI hud;
+        public PauseUI pause;
 
-        [Header("Manager Settings")]
+        [Header("Game Settings")]
         public int score;
-        public int lives = 3;
-        public bool isTimerRunning;
-        public float timeRemaining = 60f;
+        public int lives;
+        public float time;
+        public float countdown;
+        public bool isGameRunning;
+        public bool isGameFinished;
+        public bool isCountdownStarted;
 
-        [Header("HUD Settings")]
-        public int scoreTextWidth = 4;
-        public int timerTextWidth = 2;
-        public int livesTextWidth = 1;
-        public string timerTextFormat = "T-{0}";
-        public string scoreTextFormat = "{0}";
-        public string livesTextFormat = "{0} lives left. \nTap to start.";
-        public bool showLivesOnPlay;
+
+        [Header("Game Events")]
+        public UnityEvent onCountdownStarted;
+        public UnityEvent onGameStarted;
+        public UnityEvent onGameFinished;
 
         [Header("Rating per Star")]
         public int[] rating = new int[3];
 
-        // Save scene name for Retry()
+        // Internal game attributes
         private string _scene;
-
-        // Control variables
-        private bool _isGameOver;
-
-        // Other game objects and components
-        private TextMeshProUGUI _hudLivesText;
-        private TextMeshProUGUI _hudScoreText;
-        private TextMeshProUGUI _hudTimerText;
-        private GameObject _unpausedGameObject;
 
         private void Awake() {
             _scene = SceneManager
@@ -46,82 +37,65 @@ namespace Common.Scripts {
         }
 
         private void Start() {
-            _unpausedGameObject = hudPanel.transform
-                .Find("Unpaused Text").gameObject;
-            _hudScoreText = hudPanel
-                .transform.Find("Score Text")
-                .GetComponent<TextMeshProUGUI>();
-            _hudTimerText = hudPanel
-                .transform.Find("Timer Text")
-                .GetComponent<TextMeshProUGUI>();
-            _hudLivesText = _unpausedGameObject
-                .GetComponentInChildren<TextMeshProUGUI>();
+            UpdateUI();
         }
 
-        private void Update() {
-            // Skip method if IsGameOver
-            if (_isGameOver)
+        private void FixedUpdate() {
+            if (isGameFinished)
                 return;
 
-            // Update the HUD components
-            var scoreString = score.ToString()
-                .PadLeft(scoreTextWidth, '0');
-            _hudScoreText.text = string.Format(
-                scoreTextFormat, scoreString);
+            if (isCountdownStarted) {
+                // If countdown started and game is already running
+                // --> Tick the down the game timer
+                if (isGameRunning) {
+                     if (time > 0)
+                         time -= Time.fixedDeltaTime;
+                     else {
+                         onGameFinished?.Invoke();
+                         Finish();
+                     }
+                }
 
-            var timerString = ((int) timeRemaining).ToString()
-                .PadLeft(timerTextWidth, '0');
-            _hudTimerText.text = string.Format(
-                    timerTextFormat, timerString);
+                // If the countdown started and game is not running
+                // --> Tick down the countdown timer to run game
+                else {
+                    if (countdown > 0)
+                        countdown -= Time.fixedDeltaTime;
+                    else {
+                        onGameStarted?.Invoke();
+                        isGameRunning = true;
+                    }
+                }
 
-            var livesString = lives.ToString()
-                .PadLeft(livesTextWidth, '0');
-            _hudLivesText.text = string.Format(
-                livesTextFormat, livesString);
-
-            _unpausedGameObject.SetActive(
-                // If show and timer not running
-                showLivesOnPlay || !isTimerRunning);
-
-            // Check for time remaining
-            // and tick the timer
-            if (isTimerRunning) {
-                if (timeRemaining > 0)
-                    timeRemaining -= Time.deltaTime;
-                else GameOver();
+                // Update UI if game is started
+                UpdateUI();
             }
 
-            // Check for lives remaining
-            if (lives <= 0)
-                GameOver();
-
-            // Game not running check (interact to run)
-            // and if Game Over panel is not active
-            if (IsInteracted() && !isTimerRunning) {
-                isTimerRunning = true;
+            // If countdown is not started the player interacted
+            // --> Start the countdown
+            else if (IsInteracted()) {
+                onCountdownStarted?.Invoke();
+                isCountdownStarted = true;
             }
         }
 
-        public int GetRating() {
-            var min = 0;
-            for (var i = 0; i < rating.Length; i++) {
-                var max = rating[i];
-                if (score >= min &&
-                    (score <= max ||
-                     i == rating.Length - 1))
-                    return i;
-                min = rating[i];
-            }
-            return 0;
+        private void UpdateUI() {
+            hud.SetScore(score);
+            hud.SetLives(lives);
+            hud.SetTimer((int) time);
+            hud.SetCountdown((int) countdown);
+
+            // Show only message if game hasn't started
+            hud.SetMessageActive(!isCountdownStarted);
         }
 
         public void SetPause(bool value) {
-            // Toggle HUD visibility
-            hudPanel.SetActive(!value);
-            pausePanel.SetActive(value);
+            hud.gameObject.SetActive(!value);
+            pause.gameObject.SetActive(value);
 
-            if (value && isTimerRunning) {
-                isTimerRunning = false;
+            if (value && isGameRunning) {
+                // TODO invoke event
+                isGameRunning = false;
             }
         }
 
@@ -135,9 +109,22 @@ namespace Common.Scripts {
             SceneManager.LoadScene("Main Menu");
         }
 
-        private void GameOver() {
-            _isGameOver = true;
+        private void Finish() {
+            isGameFinished = true;
             SceneManager.LoadScene("Game Over");
+        }
+
+        public int GetRating() {
+            var min = 0;
+            for (var i = 0; i < rating.Length; i++) {
+                var max = rating[i];
+                if (score >= min &&
+                    (score <= max ||
+                     i == rating.Length - 1))
+                    return i;
+                min = rating[i];
+            }
+            return 0;
         }
 
         // Checks if player interacted
