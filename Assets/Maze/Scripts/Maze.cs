@@ -1,8 +1,8 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 namespace Maze.Scripts {
@@ -14,12 +14,11 @@ namespace Maze.Scripts {
         public Color colorNormal = Color.white;
         public Color colorError = Color.red;
         public Color colorFinished = Color.green;
-        public Difficulty difficulty = Difficulty.Easy;
+        public float regenerateDelay = 1f;
 
-        [Header("Maze List (By Difficulty)")]
-        public List<Sprite> easy;
-        public List<Sprite> medium;
-        public List<Sprite> hard;
+        [FormerlySerializedAs("easy")]
+        [Header("Maze List")]
+        public List<Sprite> list;
 
         // Maze history
         // History does not repeat itself
@@ -43,16 +42,13 @@ namespace Maze.Scripts {
             // Get a random item from list
             Sprite sprite = null;
 
-            while (sprite == null || _done.Contains(sprite))
-                sprite = difficulty switch {
-                    Difficulty.Easy =>
-                        easy[Random.Range(0, easy.Count)],
-                    Difficulty.Medium =>
-                        medium[Random.Range(0, medium.Count)],
-                    Difficulty.Hard =>
-                        hard[Random.Range(0, hard.Count)],
-                    _ => throw new ArgumentOutOfRangeException()
-                };
+            while (sprite == null || _done.Contains(sprite)) {
+                sprite = list[Random.Range(0, list.Count)];
+
+                // Repeat mazes when isa na lang
+                if (_done.Count == list.Count - 1)
+                    _done.Clear();
+            }
 
             // Use generated sprite
             _renderer.sprite = sprite;
@@ -79,7 +75,7 @@ namespace Maze.Scripts {
             "Unity.InefficientPropertyAccess")]
         private IEnumerator OnError() {
             _renderer.color = colorError;
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(regenerateDelay);
             _renderer.color = colorNormal;
         }
 
@@ -87,7 +83,7 @@ namespace Maze.Scripts {
             "Unity.InefficientPropertyAccess")]
         private IEnumerator OnFinished() {
             _renderer.color = colorFinished;
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(regenerateDelay);
             _renderer.color = colorNormal;
 
              // Regenerate maze

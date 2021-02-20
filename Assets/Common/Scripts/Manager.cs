@@ -116,7 +116,7 @@ namespace Common.Scripts {
             hud.SetCountdownActive(isCountdownStarted);
 
             // Show only message if game not running
-            hud.SetMessageActive(!isGameRunning);
+            hud.SetMessageActive(!isGameRunning && !isCountdownStarted);
         }
 
         public void SetPause(bool value, bool withUI = true) {
