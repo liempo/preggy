@@ -172,24 +172,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   good:
-  - sprite: {fileID: 21300000, guid: 1303b31eddb4dce479ea45007fc8f2e1, type: 3}
-    type: 0
-  - sprite: {fileID: 21300000, guid: 8530de8da730be94287617bfd8e91c3c, type: 3}
-    type: 0
-  - sprite: {fileID: 21300000, guid: 6c7bbea450b68ef4e8bb832632b016cb, type: 3}
-    type: 0
-  - sprite: {fileID: 21300000, guid: 611d72bceac05c5469890d334decb99b, type: 3}
-    type: 0
+  - {fileID: 11400000, guid: 4babedfd920d8124abb4bccda6308102, type: 2}
+  - {fileID: 11400000, guid: 7614fe5ecc2975a4796c1fc7dee05ed9, type: 2}
+  - {fileID: 11400000, guid: 77ef3e714801d9f4bbfd28c8c9129ca1, type: 2}
+  - {fileID: 11400000, guid: 17752e1c494b66845b52ce02bdd8d612, type: 2}
   bad:
-  - sprite: {fileID: 21300000, guid: f167c3ccc819200448e06891e8a87efc, type: 3}
-    type: 1
-  - sprite: {fileID: 21300000, guid: 4dea6a8deca87b4468edf4a187c82e30, type: 3}
-    type: 1
-  - sprite: {fileID: 21300000, guid: b8776df7a0a4cf04f870e3df4d68423b, type: 3}
-    type: 1
-  - sprite: {fileID: 21300000, guid: 3f3c16b3a14c1ce4eb428de30cb3ba83, type: 3}
-    type: 1
-  chanceOfBad: 0.5
+  - {fileID: 11400000, guid: f7dd4aa7f5a6cf743b22a92345bac98a, type: 2}
+  - {fileID: 11400000, guid: 8c43f852f0ce9024a822b1bf9cb9f4b9, type: 2}
+  - {fileID: 11400000, guid: b7c8d7ac6c6a020439e3219ac509820c, type: 2}
+  - {fileID: 11400000, guid: 43d8d875736fd5941ba7a53dda5bd34b, type: 2}
+  chanceOfBad: 30
   prefab: {fileID: 6748964239312956236, guid: 72ecc3b40ce3afa4e84019e2642fac3f, type: 3}
 --- !u!1 &232326773
 GameObject:

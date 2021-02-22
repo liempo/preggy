@@ -11,6 +11,10 @@
     {
       "title": "Stage 3",
       "scene": "Jump"
+    },
+    {
+      "title": "Stage 4",
+      "scene": "Maze"
     }
   ]
 }
