@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Common.Scripts {
+namespace Common.Scripts.Utilities {
     public static class JsonHelper {
         public static T[] FromJson<T>(string json) {
             var wrapper = JsonUtility.FromJson<Wrapper<T>>(json);

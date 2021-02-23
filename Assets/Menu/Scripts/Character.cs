@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.Experimental.U2D.Animation;
-using static Common.Scripts.Controls;
+using static Common.Scripts.Utilities.Controls;
 
-namespace Common.Scripts {
+namespace Menu.Scripts {
     public class Character : MonoBehaviour {
 
         // To be shown in the inpsector

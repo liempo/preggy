@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Common.Scripts {
+namespace Common.Scripts.UI {
     public class InGameUI : MonoBehaviour {
 
         [Header("Components")]

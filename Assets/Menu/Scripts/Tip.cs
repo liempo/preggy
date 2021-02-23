@@ -1,6 +1,7 @@
 ﻿using System;
+using Common.Scripts.Utilities;
 
-namespace Common.Scripts {
+namespace Menu.Scripts {
     [Serializable]
     public class Tip {
         public string header;

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Common.Scripts {
+namespace Common.Scripts.Utilities {
     public static class Controls {
 
         /** Get the percentage of a point

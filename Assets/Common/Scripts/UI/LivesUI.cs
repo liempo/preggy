@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Common.Scripts {
+namespace Common.Scripts.UI {
     public class LivesUI : MonoBehaviour {
 
         public int count;
