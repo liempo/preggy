@@ -24,6 +24,7 @@ namespace Catch.Scripts {
             else if (other.gameObject.CompareTag("Ground"))
                 if (Item.type == SpawnType.Good) {
                     _manager.lives--;
+                    _manager.hud.SetMessage("Catch healthy food!");
                     _manager.SetPause(true, false);
                 } else _manager.score += points;
             Destroy(gameObject);

@@ -1,6 +1,6 @@
 ﻿using Common.Scripts;
 using UnityEngine;
-using static Common.Scripts.Controls;
+using static Common.Scripts.Utilities.Controls;
 
 namespace Breakout.Scripts {
     public class Paddle : MonoBehaviour {
