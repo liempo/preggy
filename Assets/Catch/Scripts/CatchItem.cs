@@ -1,8 +1,9 @@
 ﻿using Common.Scripts;
+using Common.Scripts.Spawning;
 using UnityEngine;
 
 namespace Catch.Scripts {
-    public class Droppable : Spawnable {
+    public class CatchItem : Spawnable {
 
         public int points = 100;
 
