@@ -3,12 +3,12 @@
 namespace Common.Scripts.Spawning {
     public class Spawnable : MonoBehaviour {
         // Can only be accessed with Set
-        protected SpawnItem Item;
+        public SpawnItem item;
 
-        public void Set(SpawnItem item) {
+        public void Set(SpawnItem i) {
             GetComponent<SpriteRenderer>()
-                .sprite = item.sprite;
-            Item = item;
+                .sprite = i.sprite;
+            item = i;
         }
     }
 }

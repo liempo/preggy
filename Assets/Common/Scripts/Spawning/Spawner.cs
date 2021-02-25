@@ -16,7 +16,7 @@ namespace Common.Scripts.Spawning {
             _spawnArea = GetComponent<RectTransform>().rect;
         }
 
-        protected void Spawn() {
+        protected GameObject Spawn() {
             // No item is passed, generate item using params
             var chance = Random.Range(0f, 1f);
             var type = chance < chanceOfSpawningBad ?
@@ -26,24 +26,24 @@ namespace Common.Scripts.Spawning {
             var array = items.Where(
                 i => i.type == type).ToArray();
             var item = array[Random.Range(0, array.Length)];
-
-            Spawn(item);
+            return Spawn(item);
         }
 
-        protected void Spawn(SpawnItem item, Vector3 position) {
+        protected GameObject Spawn(SpawnItem item, Vector3 position) {
             // Instantiate the object
             var spawnable = Instantiate(
                 spawnablePrefab, position, Quaternion.identity);
             spawnable.GetComponent<Spawnable>().Set(item);
+            return spawnable;
         }
 
-        protected void Spawn(SpawnItem item) {
+        protected GameObject Spawn(SpawnItem item) {
             // First, generate the position randomly
             var position = new Vector3(
                 Random.Range(_spawnArea.xMin, _spawnArea.xMax),
                 Random.Range(_spawnArea.yMin, _spawnArea.yMax));
             position += transform.position;
-            Spawn(item, position);
+            return Spawn(item, position);
         }
     }
 }
