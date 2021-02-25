@@ -23,16 +23,21 @@ namespace Common.Scripts.UI {
         public string scoreFormat = "{0}";
 
         private void Start() {
-            pause.onClick.AddListener(delegate {
-                FindObjectOfType<Manager>()
-                    .SetPause(true);
-            });
+            if (pause != null)
+                pause.onClick.AddListener(delegate {
+                    FindObjectOfType<Manager>()
+                        .SetPause(true);
+                });
 
             // Initially disable countdown text
-            countdown.gameObject.SetActive(false);
+            if (countdown != null)
+                countdown.gameObject.SetActive(false);
         }
 
         public void SetScore(int value) {
+            if (score == null || !score.isActiveAndEnabled)
+                return;
+
             score.text = string.Format(scoreFormat,
                 value.ToString().PadLeft(
                     scoreWidth, '0')
@@ -40,6 +45,9 @@ namespace Common.Scripts.UI {
         }
 
         public void SetTimer(int value) {
+            if (timer == null || !timer.isActiveAndEnabled)
+                return;
+
             timer.text = string.Format(timerFormat,
                 value.ToString().PadLeft(
                     timerWidth, '0')
@@ -47,6 +55,9 @@ namespace Common.Scripts.UI {
         }
 
         public void SetLives(int value) {
+            if (lives == null || !lives.isActiveAndEnabled)
+                return;
+
             if (value < lives.count)
                 lives.SetRemaining(value);
             else if (value > lives.count)
@@ -54,19 +65,28 @@ namespace Common.Scripts.UI {
         }
 
         public void SetCountdown(int value) {
+            if (countdown == null || !lives.isActiveAndEnabled)
+                return;
+
             countdown.text = value.ToString().PadLeft(
                     countdownWidth, '0');
         }
 
         public void SetMessage(string value) {
+            if (message == null || !message.isActiveAndEnabled)
+                return;
             message.text = value;
         }
 
         public void SetMessageActive(bool value) {
+            if (message == null || !message.isActiveAndEnabled)
+                return;
             message.gameObject.SetActive(value);
         }
 
         public void SetCountdownActive(bool value) {
+            if (countdown == null || !countdown.isActiveAndEnabled)
+                return;
             countdown.gameObject.SetActive(value);
         }
     }
