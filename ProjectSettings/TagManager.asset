@@ -11,6 +11,7 @@ TagManager:
   - Paddle
   - Maze
   - Path
+  - Spawnable
   layers:
   - Default
   - TransparentFX
