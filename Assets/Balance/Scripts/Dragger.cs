@@ -1,8 +1,7 @@
-﻿using Common.Scripts.Spawning;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Balance.Scripts {
-    public class Dragger : Spawnable {
+    public class Dragger : MonoBehaviour {
 
         private Camera _camera;
         private Rigidbody2D _selected;

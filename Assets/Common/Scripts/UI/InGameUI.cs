@@ -55,9 +55,6 @@ namespace Common.Scripts.UI {
         }
 
         public void SetLives(int value) {
-            if (lives == null || !lives.isActiveAndEnabled)
-                return;
-
             if (value < lives.count)
                 lives.SetRemaining(value);
             else if (value > lives.count)
@@ -65,9 +62,6 @@ namespace Common.Scripts.UI {
         }
 
         public void SetCountdown(int value) {
-            if (countdown == null || !lives.isActiveAndEnabled)
-                return;
-
             countdown.text = value.ToString().PadLeft(
                     countdownWidth, '0');
         }
@@ -85,8 +79,6 @@ namespace Common.Scripts.UI {
         }
 
         public void SetCountdownActive(bool value) {
-            if (countdown == null || !countdown.isActiveAndEnabled)
-                return;
             countdown.gameObject.SetActive(value);
         }
     }

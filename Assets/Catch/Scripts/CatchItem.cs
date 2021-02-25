@@ -15,14 +15,14 @@ namespace Catch.Scripts {
 
         private void OnCollisionEnter2D(Collision2D other) {
             if (other.gameObject.CompareTag("Player"))
-                if (Item.type == SpawnType.Bad) {
+                if (item.type == SpawnType.Bad) {
                     _manager.lives--;
                     _manager.hud.SetMessage("Do not catch unhealthy food!");
                     _manager.SetPause(true, false);
                 }
                 else _manager.score += points;
             else if (other.gameObject.CompareTag("Ground"))
-                if (Item.type == SpawnType.Good) {
+                if (item.type == SpawnType.Good) {
                     _manager.lives--;
                     _manager.hud.SetMessage("Catch healthy food!");
                     _manager.SetPause(true, false);

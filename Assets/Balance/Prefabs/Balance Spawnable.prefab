@@ -121,7 +121,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.3
+  m_Radius: 0.35
 --- !u!114 &5312394472081090436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,3 +134,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a6398642f5d4790bdcf85949955f9b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  item: {fileID: 0}

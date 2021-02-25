@@ -5885,5 +5885,17 @@ PrefabInstance:
       propertyPath: pause
       value: 
       objectReference: {fileID: 75609255}
+    - target: {fileID: 7244220877199400613, guid: 9038d914d32eb0a42b4439c38e11deb9, type: 3}
+      propertyPath: rating.Array.data[0]
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 7244220877199400613, guid: 9038d914d32eb0a42b4439c38e11deb9, type: 3}
+      propertyPath: rating.Array.data[1]
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 7244220877199400613, guid: 9038d914d32eb0a42b4439c38e11deb9, type: 3}
+      propertyPath: rating.Array.data[2]
+      value: 2000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9038d914d32eb0a42b4439c38e11deb9, type: 3}

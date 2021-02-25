@@ -147,7 +147,7 @@ namespace Common.Scripts {
             SceneManager.LoadScene("Main Menu");
         }
 
-        private void Finish() {
+        public void Finish() {
             onGameFinished?.Invoke();
             isGameFinished = true;
             SceneManager.LoadScene("Game Over");
