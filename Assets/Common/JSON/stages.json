@@ -1,23 +1,23 @@
 ﻿{
   "items": [
     {
-      "title": "Stage 1",
+      "title": "Think About Your Medicine",
       "scene": "Breakout"
     },
     {
-      "title": "Stage 2",
+      "title": "Nourish the Body",
       "scene": "Catch"
     },
     {
-      "title": "Stage 3",
+      "title": "Shed Pounds",
       "scene": "Jump"
     },
     {
-      "title": "Stage 4",
+      "title": "Doctor's Appointment",
       "scene": "Maze"
     },
     {
-      "title": "Stage 5",
+      "title": "Eat Smart",
       "scene": "Balance"
     }
   ]
