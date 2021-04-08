@@ -73,8 +73,6 @@ namespace Common.Scripts.UI {
         }
 
         public void SetMessageActive(bool value) {
-            if (message == null || !message.isActiveAndEnabled)
-                return;
             message.gameObject.SetActive(value);
         }
 
