@@ -6,7 +6,7 @@
     },
     {
       "title": "Nourish the Body",
-      "scene": "Catch"
+      "scene": "Nourish"
     },
     {
       "title": "Shed Pounds",
@@ -19,6 +19,10 @@
     {
       "title": "Eat Smart",
       "scene": "Balance"
+    },
+    {
+      "title": "Quit Smoking",
+      "scene": "Quit"
     }
   ]
 }
