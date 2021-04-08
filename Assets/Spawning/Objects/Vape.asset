@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Vape
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 4f581e40034c3344d9f67298b35eb464, type: 3}
-  type: 0
+  type: 1
