@@ -12,17 +12,23 @@ namespace Destroy.Scripts {
             Respawn();
         }
 
-        private void Respawn() {
+        public void Respawn() {
             // Clear all spawned objects
-            foreach (var obj in spawned) {
-                Destroy(obj);
-                spawned.Remove(obj);
+            foreach (var spawnable in spawned) {
+                Destroy(spawnable.gameObject);
             }
+            spawned.Clear();
 
-            foreach (var anchor in anchors) {
+            // Randomize the position of the bad one
+            var badPosition = Random.Range(
+                0, anchors.Count);
+
+            for (var i = 0; i < anchors.Count; i++) {
+                var type = i == badPosition ?
+                    SpawnType.Bad : SpawnType.Good;
                 var spawnable = Spawn(
-                    GetRandomItem(),
-                    anchor.position);
+                    GetRandomItemOfType(type),
+                    anchors[i].position);
                 spawned.Add(spawnable);
             }
         }

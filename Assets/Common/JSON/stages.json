@@ -23,6 +23,10 @@
     {
       "title": "Quit Smoking",
       "scene": "Quit"
+    },
+    {
+      "title": "Destroy Bad Habits",
+      "scene": "Destroy"
     }
   ]
 }
