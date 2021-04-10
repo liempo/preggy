@@ -27,6 +27,10 @@
     {
       "title": "Destroy Bad Habits",
       "scene": "Destroy"
+    },
+    {
+      "title": "Hit the Gym!",
+      "scene": "Run"
     }
   ]
 }

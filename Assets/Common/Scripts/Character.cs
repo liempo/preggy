@@ -12,6 +12,7 @@ namespace Common.Scripts {
         public bool jumpEnabled;
         public bool runEnabled;
         public bool centerMode;
+        public bool runAnimationAlwaysEnabled;
 
         // Internal variables
         private Rigidbody2D _rb;
@@ -36,6 +37,8 @@ namespace Common.Scripts {
                 Run();
             if (jumpEnabled)
                 Jump();
+            _animator.SetBool(IsRunning,
+                runAnimationAlwaysEnabled);
         }
 
         private void Run() {
