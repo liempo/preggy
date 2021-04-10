@@ -19,8 +19,6 @@ namespace Run.Scripts {
         private void Start() {
             _manager = FindObjectOfType<Manager>();
             _rb = GetComponent<Rigidbody2D>();
-
-            Debug.Log("timeScale = " + Time.timeScale);
         }
 
         private void FixedUpdate() {
@@ -33,7 +31,7 @@ namespace Run.Scripts {
                         var oldCharPos = _other.position;
                         _other.position = new Vector2(0, oldCharPos.y);
                     }
-                }
+                } else _rb.velocity = _rb.velocity.normalized * speed;
             }
             else {
                 _rb.velocity = Vector2.zero;
