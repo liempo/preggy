@@ -40,6 +40,48 @@
         "I felt pressured not to have abortion",
         "It wasn't planned but realized I wanted it"
       ]
+    },
+    {
+      "question": "Do you think relying on the morning after pill is enough to prevent pregnancy?",
+      "choices": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "question": "In your opinion what is the main reason why teen get pregnant?",
+      "choices": [
+        "Irresponsible",
+        "They want to",
+        "Poor education on pregnancy",
+        "Birth control error"
+      ]
+    },
+    {
+      "question": "Schools and parent are doing enough to educate teenagers about the dangers of teen pregnancy?",
+      "choices": [
+        "Strongly agree",
+        "Agree",
+        "Disagree",
+        "Strongly disagree"
+      ]
+    },
+    {
+      "question": "Emotional problem or depression?",
+      "choices": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "question": "What would you suggest should be done to reduce the rates of unplanned teenage pregnancy (contraception)?",
+      "choices": [
+        "Better access to availability of contraception",
+        "Better sex and relationship education in schools",
+        "Improving aspirations of young people generally",
+        "More people friendly services",
+        "Tougher child support agency"
+      ]
     }
   ]
 }
