@@ -35,10 +35,10 @@ namespace Common.Scripts {
         private void FixedUpdate() {
             if (runEnabled)
                 Run();
+            else _animator.SetBool(IsRunning,
+                runAnimationAlwaysEnabled);
             if (jumpEnabled)
                 Jump();
-            _animator.SetBool(IsRunning,
-                runAnimationAlwaysEnabled);
         }
 
         private void Run() {

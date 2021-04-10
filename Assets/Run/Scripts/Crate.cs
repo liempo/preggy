@@ -6,12 +6,12 @@ using Vector2 = UnityEngine.Vector2;
 namespace Run.Scripts {
     public class Crate : MonoBehaviour {
 
-        public Character character;
         public float speed = 0.5f;
         public float minimumX = -5;
         public float respawnMinX = 5f;
         public float respawnMaxX = 15f;
         private Rigidbody2D _rb;
+        private Rigidbody2D _other;
 
         private Manager _manager;
         private bool _isMoving;
@@ -19,18 +19,27 @@ namespace Run.Scripts {
         private void Start() {
             _manager = FindObjectOfType<Manager>();
             _rb = GetComponent<Rigidbody2D>();
+
+            Debug.Log("timeScale = " + Time.timeScale);
         }
 
-        private void Update() {
+        private void FixedUpdate() {
             if (_manager.isGameRunning) {
                 if (!_isMoving) {
-                    _rb.velocity = Vector2.left
-                                   * (speed * Time.time);
+                    _rb.velocity = Vector2.left * (speed * Time.time);
                     _isMoving = true;
+
+                    if (_other != null) {
+                        var oldCharPos = _other.position;
+                        _other.position = new Vector2(0, oldCharPos.y);
+                    }
                 }
             }
-
-            else _rb.velocity = Vector2.zero;
+            else {
+                _rb.velocity = Vector2.zero;
+                if (_other != null)
+                    _other.velocity = Vector2.zero;
+            }
 
             if (_rb.position.x < minimumX) {
                 Respawn();
@@ -47,8 +56,8 @@ namespace Run.Scripts {
         private void OnCollisionEnter2D(Collision2D other) {
             if (other.gameObject.CompareTag("Player")) {
                 Respawn();
-                var oldCharPos = other.rigidbody.position;
-                other.rigidbody.position = new Vector2(0, oldCharPos.y);
+                _isMoving = false;
+                _other = other.rigidbody;
 
                 _manager.lives--;
                 _manager.SetPause(true, false);
