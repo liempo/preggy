@@ -33,7 +33,7 @@ namespace Run.Scripts {
                         var oldCharPos = _other.position;
                         _other.position = new Vector2(0, oldCharPos.y);
                     }
-                }
+                } else _rb.velocity = _rb.velocity.normalized * speed;
             }
             else {
                 _rb.velocity = Vector2.zero;
