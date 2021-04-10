@@ -1,5 +1,4 @@
-﻿using Common.Scripts;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
 

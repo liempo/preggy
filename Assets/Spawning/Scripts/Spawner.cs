@@ -2,7 +2,7 @@
 using System.Linq;
 using UnityEngine;
 
-namespace Common.Scripts.Spawning {
+namespace Spawning.Scripts {
     public class Spawner : MonoBehaviour {
 
         public List<SpawnItem> items;

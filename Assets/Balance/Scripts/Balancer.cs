@@ -1,5 +1,5 @@
 ﻿using Common.Scripts;
-using Common.Scripts.Spawning;
+using Spawning.Scripts;
 using UnityEngine;
 
 namespace Balance.Scripts {

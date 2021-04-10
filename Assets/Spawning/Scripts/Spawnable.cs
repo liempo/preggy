@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Common.Scripts.Spawning {
+namespace Spawning.Scripts {
     public class Spawnable : MonoBehaviour {
         // Can only be accessed with Set
         public SpawnItem item;

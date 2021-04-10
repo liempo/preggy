@@ -1,5 +1,5 @@
 ﻿using Common.Scripts;
-using Common.Scripts.Spawning;
+using Spawning.Scripts;
 
 namespace Catch.Scripts {
     public class CatchSpawner : Spawner {

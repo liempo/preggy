@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Common.Scripts.Spawning {
+namespace Spawning.Scripts {
 
     [CreateAssetMenu(
         fileName = "spawn",

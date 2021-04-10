@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Common.Scripts.Spawning;
+using Spawning.Scripts;
 using UnityEngine;
 
 namespace Destroy.Scripts {

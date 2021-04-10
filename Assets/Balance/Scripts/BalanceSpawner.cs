@@ -1,4 +1,4 @@
-﻿using Common.Scripts.Spawning;
+﻿using Spawning.Scripts;
 
 namespace Balance.Scripts {
     public class BalanceSpawner : Spawner {
