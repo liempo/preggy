@@ -1,5 +1,4 @@
-﻿using Common.Scripts;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -44,8 +43,12 @@ namespace Menu.Scripts {
                 Destroy(child.gameObject);
 
             // if index will go out of bounds clear choices and set text
-            if (_index == _items.Length - 1) {
+            if (_index == _items.Length - 1 && !askOnce) {
                 _questionText.text = endMessage;
+
+                PlayerPrefs.SetInt("SurveyAnswered", 1);
+                PlayerPrefs.Save();
+
                 return;
             }
 
