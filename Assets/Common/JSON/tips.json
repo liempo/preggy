@@ -1,49 +1,54 @@
 ﻿{
   "items": [
     {
-      "header": "FIRST TRIMESTER TIPS",
+      "trimester": "1",
       "title": "Do think of food fuel",
       "content": "Similarly, you do not want to fuel your body with sub-par energy sources. Choose organic foods whenever possible and eat from local food sources if you can. This limits your exposure to patricides."
     },
     {
-      "header": "FIRST TRIMESTER TIPS",
+      "trimester": "1",
       "title": "Do eat the rainbow",
       "content": "tNot literally, but when you are meal-planning or find yourself in need of a snack, try to eat foods that are colorful: like carrots, apple, bananas. "
     },
     {
-      "header": "FIRST TRIMESTER TIPS",
+      "trimester": "1",
       "title": "Do sleep",
       "content": "Your body is going through tremendous changes and is developing an entirely new life- providing system for your baby. "
     },
     {
-      "header": "FIRST TRIMESTER TIPS",
-      "title": "Do exercise",
-      "content": "Regular exercise helps you combat the frequent mood and hormonal changes and fatigue occurring in this first TRIMESTER TIPS. It also helps prevent weight gain and battle insomnia"
+      "trimester": "2",
+      "title": "Do checkups",
+      "content": "Do regular and timely check-ups with your physician."
     },
     {
-      "header": "FIRST TRIMESTER TIPS",
-      "title": "Do visit the dentist",
-      "content": "According to (ACOG) says that teeth cleaning and dental X-rays are safe for pregnant. In fact, ob/gyns are now advised to do oral health assessments during an initial prenatal visit and to encourage dental visits during pregnanc"
+      "trimester": "2",
+      "title": "Get Vaccinated",
+      "content": "Do get a flu vaccine. According to the World Health Organization (WHO), women who are pregnant during the flu season should receive the vaccine. There is sufficient evidence showing that the vaccine is safe for a mother and baby at any stage of pregnancy, as it offers protection from what could be a severe illness in pregnancy. A flu vaccine does not contain the live virus which means it cannot infect you, but does cause your body to build up antibodies that protect you when you’re exposed to the live virus."
     },
     {
-      "header": "FIRST TRIMESTER TIPS",
-      "title": "Don’t smoke",
-      "content": "Now is the best time to quit, not only for your health, but also for the health of your baby. According to CDC, women who smoke during pregnancy are more risk of miscarriage, and babies born to women who smoked during pregnancy are increased risk for birth defects, such as cleft lip or cleft palate and premature birth and infant death."
+      "trimester": "2",
+      "title": "Proper Diet",
+      "content": "Do take a high protein diet with adequate milk and milk products. A balanced diet is very essential to ensure there is no weight gain."
     },
     {
-      "header": "FIRST TRIMESTER TIPS",
-      "title": "Don’t drink alcohol",
-      "content": "Drinking alcohol when pregnant can cause problems for the developing baby in all stages of pregnancy, according to CDC says that drinking alcohol in the first three months of pregnancy, specially, can cause the baby to have abnormal facial features and growth and central nervous system problems."
+      "trimester": "2",
+      "title": "Avoid Smoking",
+      "content": "Avoid alcohol, smoking, excessive intake of caffeine."
     },
     {
-      "header": "FIRST TRIMESTER TIPS",
-      "title": "Don’t eat raw meat",
-      "content": "Pregnant women who eat raw or undercooked meat and eggs are at risk of contracting. Listeriosis and toxoplasmosis, which can lead to serious and life-threatening illnesses."
+      "trimester": "3",
+      "title": "Get Ready",
+      "content": "Prepare bags for hospital."
     },
     {
-      "header": "FIRST TRIMESTER TIPS",
-      "title": "Don’t visit the sauna",
-      "content": "There is a risk of overheating, dehydration. And fainting every time you use sauna, whirlpool, hot tub or steam room. In fact, some research suggests that your risk of miscarriage doubles if you use one of these during the first TRIMESTER TIPS"
+      "trimester": "3",
+      "title": "Dental Checkups",
+      "content": "Do get a dental check up to prevent dental infections."
+    },
+    {
+      "trimester": "3",
+      "title": "Get Help",
+      "content": "•Identify people who can help you in an emergency."
     }
   ]
 }

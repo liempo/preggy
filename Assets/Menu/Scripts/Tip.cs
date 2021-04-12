@@ -4,7 +4,7 @@ using Common.Scripts.Utilities;
 namespace Menu.Scripts {
     [Serializable]
     public class Tip {
-        public string header;
+        public int trimester;
         public string title;
         public string content;
 

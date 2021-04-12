@@ -1,6 +1,7 @@
 using Common.Scripts;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Menu.Scripts {
     public class GameOver : MonoBehaviour {
@@ -34,7 +35,11 @@ namespace Menu.Scripts {
         public void Quit() {
             // If manager is not null
             // Use it to quit else quit manually
-            if (_manager != null) _manager.Quit();
+            if (_manager != null) {
+                if (_manager.scene == "Run")
+                    SceneManager.LoadScene("Results");
+                else _manager.Quit();
+            }
         }
     }
 }

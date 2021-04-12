@@ -8295,6 +8295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonPrefab: {fileID: 2148438830850204978, guid: 83988cc8275426e48a63d656a712dd14, type: 3}
+  tipArea: {fileID: 2074613741}
   stagesJson: {fileID: 4900000, guid: dcadcc0c3d22f24429c50d31c9e97a68, type: 3}
 --- !u!1 &1649585986
 GameObject:
@@ -9373,7 +9374,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!222 &1877807537
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -30,10 +30,10 @@ namespace Common.Scripts {
         public int[] rating = new int[3];
 
         // Internal game attributes
-        private string _scene;
+        public string scene;
 
         private void Awake() {
-            _scene = SceneManager
+            scene = SceneManager
                 .GetActiveScene().name;
             DontDestroyOnLoad(gameObject);
         }
@@ -139,7 +139,7 @@ namespace Common.Scripts {
 
         public void Retry() {
             Destroy(gameObject);
-            SceneManager.LoadScene(_scene);
+            SceneManager.LoadScene(scene);
         }
 
         public void Quit() {

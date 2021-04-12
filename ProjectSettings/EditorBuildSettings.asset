@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Run/Run.unity
     guid: fcf50a6e19692e9449a82e1a665b3978
+  - enabled: 1
+    path: Assets/Menu/Results.unity
+    guid: 3a139275c5c03c24a9ec149b78f83bbc
   m_configObjects: {}
