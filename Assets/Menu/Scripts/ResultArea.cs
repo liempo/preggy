@@ -1,5 +1,6 @@
 ﻿using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
 namespace Menu.Scripts {
@@ -26,6 +27,10 @@ namespace Menu.Scripts {
                 0, _results.Length);
             title.text = _results[index].title;
             content.text = _results[index].content;
+        }
+
+        public void Back() {
+            SceneManager.LoadScene("Main Menu");
         }
     }
 }
