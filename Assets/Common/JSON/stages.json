@@ -29,6 +29,10 @@
       "scene": "Destroy"
     },
     {
+      "title": "Get Advice",
+      "scene": "Parents"
+    },
+    {
       "title": "Hit the Gym!",
       "scene": "Run"
     }

@@ -3,7 +3,7 @@ using Spawning.Scripts;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Balance.Scripts {
+namespace Destroy.Scripts {
     public class Clicker : MonoBehaviour {
 
         private Camera _camera;
