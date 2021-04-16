@@ -501,6 +501,7 @@ MonoBehaviour:
   - text: Don't Exercise
     type: 0
   spawned: []
+  objects: []
 --- !u!1001 &2075458141
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -564,6 +565,22 @@ PrefabInstance:
       propertyPath: pause
       value: 
       objectReference: {fileID: 3706825323102120921}
+    - target: {fileID: 7244220877199400613, guid: 9038d914d32eb0a42b4439c38e11deb9, type: 3}
+      propertyPath: gameTime
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7244220877199400613, guid: 9038d914d32eb0a42b4439c38e11deb9, type: 3}
+      propertyPath: rating.Array.data[0]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7244220877199400613, guid: 9038d914d32eb0a42b4439c38e11deb9, type: 3}
+      propertyPath: rating.Array.data[1]
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7244220877199400613, guid: 9038d914d32eb0a42b4439c38e11deb9, type: 3}
+      propertyPath: rating.Array.data[2]
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 7244220877199400613, guid: 9038d914d32eb0a42b4439c38e11deb9, type: 3}
       propertyPath: onGameStarted.m_PersistentCalls.m_Calls.Array.size
       value: 1

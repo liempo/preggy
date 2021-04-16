@@ -527,6 +527,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1694445209}
     - target: {fileID: 7244220877199400613, guid: 9038d914d32eb0a42b4439c38e11deb9, type: 3}
+      propertyPath: gameTime
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7244220877199400613, guid: 9038d914d32eb0a42b4439c38e11deb9, type: 3}
       propertyPath: rating.Array.data[0]
       value: 10
       objectReference: {fileID: 0}
