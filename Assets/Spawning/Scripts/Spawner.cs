@@ -6,6 +6,7 @@ namespace Spawning.Scripts {
     public class Spawner : MonoBehaviour {
 
         public List<SpawnItem> items;
+        public List<Spawnable> spawned;
         public GameObject spawnablePrefab;
         public float chanceOfSpawningBad = 0.5f;
 
@@ -14,6 +15,14 @@ namespace Spawning.Scripts {
 
         protected virtual void Start() {
             _spawnArea = GetComponent<RectTransform>().rect;
+        }
+
+        protected void Clear() {
+            // Clear all spawned objects
+            foreach (var spawnable in spawned) {
+                Destroy(spawnable.gameObject);
+            }
+            spawned.Clear();
         }
 
         protected SpawnItem GetRandomItem() {
@@ -39,6 +48,7 @@ namespace Spawning.Scripts {
                 spawnablePrefab, position, Quaternion.identity);
             var spawnable = obj.GetComponent<Spawnable>();
             spawnable.Set(item);
+            spawned.Add(spawnable);
             return spawnable;
         }
 
