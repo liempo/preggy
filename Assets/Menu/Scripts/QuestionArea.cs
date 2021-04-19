@@ -32,8 +32,7 @@ namespace Menu.Scripts {
 
             if (askOnce) {
                 // Randomize the question
-                _index = Random.Range(0, _items.Length);
-                Next();
+                ShowItem(_items[Random.Range(0, _items.Length)]);
             }
         }
 
@@ -55,11 +54,15 @@ namespace Menu.Scripts {
             // Increment to next index
             _index++;
 
+            ShowItem(_items[_index]);
+        }
+
+        private void ShowItem(Askable item) {
             // Change question text
-            _questionText.text = _items[_index].question;
+            _questionText.text = item.question;
 
             // Create the choices buttons
-            foreach (var choice in _items[_index].choices) {
+            foreach (var choice in item.choices) {
                 // Instantiate button prefab
                 var b = Instantiate(
                     button, _choicesArea.transform);

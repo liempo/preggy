@@ -18,6 +18,8 @@ namespace Spawning.Scripts {
         }
 
         protected void Clear() {
+            if (spawned.Count == 0) return;
+
             // Clear all spawned objects
             foreach (var spawnable in spawned) {
                 Destroy(spawnable.gameObject);
