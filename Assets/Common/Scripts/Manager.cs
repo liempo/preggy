@@ -144,6 +144,7 @@ namespace Common.Scripts {
 
         public void Quit() {
             Destroy(gameObject);
+            Time.timeScale = 1f;
             SceneManager.LoadScene("Main Menu");
         }
 
