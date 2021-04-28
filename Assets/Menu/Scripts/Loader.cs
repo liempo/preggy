@@ -8,9 +8,6 @@ namespace Menu.Scripts {
 
         private bool _activate;
 
-        [Header("Settings")]
-        public float loadDelay;
-
         [Header("Events")]
         public UnityEvent onLoadStart;
         public UnityEvent onLoadFinished;
@@ -25,8 +22,6 @@ namespace Menu.Scripts {
         }
 
         private IEnumerator Load(string sceneName) {
-            yield return new WaitForSeconds(loadDelay);
-
             var operation = SceneManager
                 .LoadSceneAsync(sceneName);
             operation.allowSceneActivation = false;
