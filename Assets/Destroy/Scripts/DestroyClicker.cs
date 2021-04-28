@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 namespace Destroy.Scripts {
-    public class Clicker : MonoBehaviour {
+    public class DestroyClicker : MonoBehaviour {
 
         private Camera _camera;
         private Manager _manager;

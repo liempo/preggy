@@ -318,6 +318,22 @@ PrefabInstance:
       propertyPath: pause
       value: 
       objectReference: {fileID: 598347508}
+    - target: {fileID: 7244220877199400613, guid: 9038d914d32eb0a42b4439c38e11deb9, type: 3}
+      propertyPath: gameTime
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7244220877199400613, guid: 9038d914d32eb0a42b4439c38e11deb9, type: 3}
+      propertyPath: rating.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7244220877199400613, guid: 9038d914d32eb0a42b4439c38e11deb9, type: 3}
+      propertyPath: rating.Array.data[1]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7244220877199400613, guid: 9038d914d32eb0a42b4439c38e11deb9, type: 3}
+      propertyPath: rating.Array.data[2]
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9038d914d32eb0a42b4439c38e11deb9, type: 3}
 --- !u!1 &582960714

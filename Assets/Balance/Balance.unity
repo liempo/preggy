@@ -398,7 +398,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 63d9a46b94bc68d46a27ba68d95fdeee, type: 2}
   - {fileID: 11400000, guid: ed9c510408b623947b37f238042d8549, type: 2}
   - {fileID: 11400000, guid: 8eba709c67cabc24ca677a85b73e196a, type: 2}
-  - {fileID: 11400000, guid: 8ef76acf8dfda774ca74f02b9714cf69, type: 2}
+  - {fileID: 11400000, guid: 43d8d875736fd5941ba7a53dda5bd34b, type: 2}
+  spawned: []
   spawnablePrefab: {fileID: 4837494510511460553, guid: 2e3e2ee737a85b64c82ccf4a6a2e8fe5, type: 3}
   chanceOfSpawningBad: 0.5
 --- !u!114 &1076735423 stripped
@@ -536,6 +537,10 @@ PrefabInstance:
       propertyPath: pause
       value: 
       objectReference: {fileID: 377148948}
+    - target: {fileID: 7244220877199400613, guid: 9038d914d32eb0a42b4439c38e11deb9, type: 3}
+      propertyPath: gameTime
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 7244220877199400613, guid: 9038d914d32eb0a42b4439c38e11deb9, type: 3}
       propertyPath: rating.Array.data[0]
       value: 20
