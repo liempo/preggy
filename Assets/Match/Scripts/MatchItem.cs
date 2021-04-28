@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using Spawning.Scripts;
 using UnityEngine;
 
@@ -8,6 +9,8 @@ namespace Match.Scripts {
         public GameObject back;
         public bool isBackActive;
         public Vector3 rotation;
+        public float rotateDuration = 1f;
+        private bool _isRotating;
 
         public void StartFlip() {
             StartCoroutine(CalculateFlip());
@@ -25,14 +28,33 @@ namespace Match.Scripts {
         }
 
         private IEnumerator CalculateFlip() {
-            for (var i = 0; i < 180; i++) {
-                yield return null;
-                transform.Rotate(rotation);
+            if (_isRotating)
+                yield break;
+            _isRotating = true;
+            var isFlipped = false;
 
-                if (i == 90) {
+            var currentRotation = transform.eulerAngles;
+            var newRotation = currentRotation + rotation;
+
+            var timer = 0f;
+            while (timer < rotateDuration) {
+                timer += Time.deltaTime;
+
+                // Lerp the rotation
+                transform.eulerAngles = Vector3.Lerp(
+                    currentRotation, newRotation,
+                    timer / rotateDuration);
+
+                // Check if vector
+                if (!isFlipped && Math.Abs(timer - (rotateDuration / 2f)) < 0.05f) {
                     ToggleBackVisible();
+                    isFlipped = true;
                 }
+
+                yield return null;
             }
+
+            _isRotating = false;
         }
     }
 }

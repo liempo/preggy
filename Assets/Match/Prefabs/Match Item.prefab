@@ -138,7 +138,8 @@ MonoBehaviour:
   item: {fileID: 0}
   back: {fileID: 9165084543965014969}
   isBackActive: 0
-  rotation: {x: 0, y: 1, z: 0}
+  rotation: {x: 0, y: 180, z: 0}
+  rotateDuration: 1
 --- !u!1 &9165084543965014969
 GameObject:
   m_ObjectHideFlags: 0
