@@ -500,6 +500,44 @@ MonoBehaviour:
     type: 1
   - text: Don't Exercise
     type: 0
+  - text: Eliminate Toxins
+    type: 0
+  - text: Travel Smart
+    type: 0
+  - text: Say Yes to Cravings
+    type: 0
+  - text: Make Friends
+    type: 0
+  - text: Indulge Yourself
+    type: 0
+  - text: Stay Clean
+    type: 0
+  - text: Drink Lots of Water
+    type: 0
+  - text: Recharge with Fruit
+    type: 0
+  - text: Eat Folate-Rich Foods
+    type: 0
+  - text: Wear Sunscreen
+    type: 0
+  - text: Track Your Weight
+    type: 0
+  - text: Write a Birth Plan
+    type: 0
+  - text: Educate Yourself
+    type: 0
+  - text: Practice Kegels
+    type: 0
+  - text: Avoid the Doctor
+    type: 0
+  - text: Smoking
+    type: 1
+  - text: Taking Non-prescribed Drugs
+    type: 1
+  - text: Eating Unhealthy Food
+    type: 1
+  - text: Not Getting an Adequate Amount of Rest
+    type: 1
   spawned: []
   objects: []
 --- !u!1001 &2075458141

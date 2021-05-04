@@ -1,0 +1,104 @@
+﻿{
+  "items": [
+    {
+      "question": "Are you pregnant on your first week of pregnancy?",
+      "choices": [
+        "1st Day of your last period",
+        "2nd Day of your last period",
+        "3rd Day of your last period",
+        "4th Day of your last period"
+      ],
+      "answerIndex": "0"
+    },
+    {
+      "question": "What is the fastest sign of pregnancy?",
+      "choices": [
+        "Tender legs",
+        "Tender arms",
+        "Tender breasts",
+        "Tender hands"
+      ],
+      "answerIndex": "2"
+    },
+    {
+      "question": "What are the symptoms in the first week of pregnancy?",
+      "choices": [
+        "Energy",
+        "Fatigue",
+        "Vigor",
+        "Vitality"
+      ],
+      "answerIndex": "1"
+    },
+    {
+      "question": "What do 2 weeks pregnant feel like?",
+      "choices": [
+        "Happiness",
+        "Physically Active",
+        "Diet",
+        "Missed periods, Moodiness, and tender swollen breasts"
+      ],
+      "answerIndex": "3"
+    },
+    {
+      "question": "How soon do you notice breast changes in pregnancy?",
+      "choices": [
+        "1 to 2 weeks",
+        "2 to 3 weeks",
+        "3 to 4 weeks",
+        "4 to 5 weeks"
+      ],
+      "answerIndex": "0"
+    },
+    {
+      "question": "What symptoms do you have at 4 weeks pregnant?",
+      "choices": [
+        "Evening sickness",
+        "Morning sickness",
+        "Afternoon sickness",
+        "Midnight sickness"
+      ],
+      "answerIndex": "1"
+    },
+    {
+      "question": "In which month of pregnancy does the tummy comes out",
+      "choices": [
+        "1st trimester",
+        "2nd trimester",
+        "3rd trimester",
+        "4th trimester"
+      ],
+      "answerIndex": "1"
+    },
+    {
+      "question": "How do nipples look like in early pregnancy?",
+      "choices": [
+        "Whiter and larger",
+        "Darker and smaller",
+        "Darker and larger",
+        "Pinkish and smaller"
+      ],
+      "answerIndex": "2"
+    },
+    {
+      "question": "When we can detect hCG in urine?",
+      "choices": [
+        "12 to 15 days",
+        "1 to 10 days",
+        "15 to 10 days",
+        "12 to 30 days"
+      ],
+      "answerIndex": "0"
+    },
+    {
+      "question": "Is fast heartbeat a sign of early pregnancy?",
+      "choices": [
+        "No",
+        "Maybe",
+        "Yes",
+        "None of the above"
+      ],
+      "answerIndex": "2"
+    }
+  ]
+}

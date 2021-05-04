@@ -1,17 +1,20 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Menu.Scripts {
     public class MenuManager : MonoBehaviour {
 
-        private static bool _isSurveyShowed;
+        private static bool _isQuizShowed;
         public GameObject menu;
-        public GameObject survey;
+
+        [FormerlySerializedAs("survey")]
+        public GameObject quiz;
 
         private void Update() {
-            if (!_isSurveyShowed) {
+            if (!_isQuizShowed) {
                 menu.SetActive(false);
-                survey.SetActive(true);
-                _isSurveyShowed = true;
+                quiz.SetActive(true);
+                _isQuizShowed = true;
             }
         }
 

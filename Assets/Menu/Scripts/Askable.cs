@@ -8,6 +8,7 @@ namespace Menu.Scripts {
     public class Askable {
         public string question;
         public List<string> choices;
+        public int answerIndex = -1;
 
         public static Askable[] Serialize(string jsonString) {
             return JsonHelper.FromJson<Askable>(jsonString);

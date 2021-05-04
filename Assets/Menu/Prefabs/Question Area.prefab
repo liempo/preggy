@@ -56,6 +56,7 @@ MonoBehaviour:
   onClick:
     m_PersistentCalls:
       m_Calls: []
+  startMessage: 
   endMessage: 
 --- !u!1 &2302406560504205887
 GameObject:
