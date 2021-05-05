@@ -1,4 +1,5 @@
 using Common.Scripts;
+using Michsky.UI.ModernUIPack;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -9,6 +10,9 @@ namespace Menu.Scripts {
         private Manager _manager;
         private Rating _rating;
         private TextMeshProUGUI _score;
+        public ButtonManager quit;
+
+        private string _finalScene = "Run";
 
         private void Start() {
             // Get manager from previous scene
@@ -24,6 +28,10 @@ namespace Menu.Scripts {
                 _manager.score.ToString() : "0000";
             _rating.SetRating((_manager != null) ?
                 _manager.GetRating() : 0);
+
+            // Set quit button text
+            if (_manager.scene == _finalScene)
+                quit.buttonText = "SHOW RESULTS";
         }
 
         public void Retry() {
@@ -36,7 +44,7 @@ namespace Menu.Scripts {
             // If manager is not null
             // Use it to quit else quit manually
             if (_manager != null) {
-                if (_manager.scene == "Run")
+                if (_manager.scene == _finalScene)
                     SceneManager.LoadScene("Results");
                 else _manager.Quit();
             }
