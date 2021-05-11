@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using UnityEngine.Experimental.U2D.Animation;
+
 using static Common.Scripts.Utilities.Controls;
 
 namespace Common.Scripts {
@@ -93,7 +93,7 @@ namespace Common.Scripts {
         public void Swap(string characterName) {
             foreach (Transform child in transform) {
                 var resolver = child.GetComponent
-                    <SpriteResolver>();
+                    <UnityEngine.U2D.Animation.SpriteResolver>();
                 if (resolver == null)
                     continue;
                 resolver.SetCategoryAndLabel(
