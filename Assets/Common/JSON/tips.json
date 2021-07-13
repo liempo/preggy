@@ -1,54 +1,40 @@
 ﻿{
   "items": [
+
     {
       "trimester": "1",
-      "title": "Do think of food fuel",
-      "content": "Similarly, you do not want to fuel your body with sub-par energy sources. Choose organic foods whenever possible and eat from local food sources if you can. This limits your exposure to patricides."
-    },
-    {
-      "trimester": "1",
-      "title": "Do eat the rainbow",
-      "content": "tNot literally, but when you are meal-planning or find yourself in need of a snack, try to eat foods that are colorful: like carrots, apple, bananas. "
-    },
-    {
-      "trimester": "1",
-      "title": "Do sleep",
-      "content": "Your body is going through tremendous changes and is developing an entirely new life- providing system for your baby. "
-    },
-    {
-      "trimester": "2",
-      "title": "Do checkups",
-      "content": "Do regular and timely check-ups with your physician."
-    },
-    {
-      "trimester": "2",
-      "title": "Get Vaccinated",
-      "content": "Do get a flu vaccine. According to the World Health Organization (WHO), women who are pregnant during the flu season should receive the vaccine. There is sufficient evidence showing that the vaccine is safe for a mother and baby at any stage of pregnancy, as it offers protection from what could be a severe illness in pregnancy. A flu vaccine does not contain the live virus which means it cannot infect you, but does cause your body to build up antibodies that protect you when you’re exposed to the live virus."
-    },
-    {
-      "trimester": "2",
-      "title": "Proper Diet",
+      "title": "NOURISH THE BODY",
       "content": "Do take a high protein diet with adequate milk and milk products. A balanced diet is very essential to ensure there is no weight gain."
     },
     {
+      "trimester": "1",
+      "title": "DOCTOR'S APPOINTMENT",
+      "content": "Do get a dental check up to prevent dental infections. Do regular and timely check-ups with your physician."
+    },
+    {
+      "trimester": "1",
+      "title": "QUIT SMOKING",
+      "content": "The first trimester is the most important time of pregnancy since it is during this time that the baby's reproductive organs develop, so don't get sick, don't smoke or drink because the baby could become abnormal, and the mother's weight and blood pressure will be monitored."
+    },
+    {
       "trimester": "2",
-      "title": "Avoid Smoking",
-      "content": "Avoid alcohol, smoking, excessive intake of caffeine."
+      "title": "DETROY BAD HABITS",
+      "content": "In the second trimester, keep going to your regular appointments, where we can utilize ultrasound to assess the baby's position and see whether there is a lack of weight or nutrition in the body. Eat well in order for your baby to be healthy."
+    },
+    {
+      "trimester": "2",
+      "title": "EAT SMART",
+      "content": "Do eat the rainbow. Not literally, but when you are meal-planning or find yourself in need of a snack, try to eat foods that are colorful: like carrots, apple, bananas. "
     },
     {
       "trimester": "3",
-      "title": "Get Ready",
-      "content": "Prepare bags for hospital."
+      "title": "GET ADVICE",
+      "content": "The third trimester, or overall, is all about the mother's health. She should not eat too much, maintain a healthy weight, and have a routine check to see what diseases she had in her teenage years."
     },
     {
       "trimester": "3",
-      "title": "Dental Checkups",
-      "content": "Do get a dental check up to prevent dental infections."
-    },
-    {
-      "trimester": "3",
-      "title": "Get Help",
-      "content": "•Identify people who can help you in an emergency."
+      "title": "MATCH BABY STUFF",
+      "content": "Prepare bags and other stuff that's needed during labor."
     }
   ]
 }

@@ -1,24 +1,12 @@
 ﻿{
   "items": [
     {
-      "title": "Think About Your Medicine",
-      "scene": "Breakout"
-    },
-    {
       "title": "Nourish the Body",
       "scene": "Nourish"
     },
     {
-      "title": "Shed Pounds",
-      "scene": "Jump"
-    },
-    {
       "title": "Doctor's Appointment",
       "scene": "Maze"
-    },
-    {
-      "title": "Eat Smart",
-      "scene": "Balance"
     },
     {
       "title": "Quit Smoking",
@@ -29,16 +17,16 @@
       "scene": "Destroy"
     },
     {
+      "title": "Eat Smart",
+      "scene": "Balance"
+    },
+    {
       "title": "Get Advice",
       "scene": "Parents"
     },
     {
       "title": "Match Baby Stuff",
       "scene": "Match"
-    },
-    {
-      "title": "Hit the Gym!",
-      "scene": "Run"
     }
   ]
 }
